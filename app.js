@@ -6,9 +6,11 @@
 // console.log(rich);
 
 //default parameter
-function add(num1, num2) {
-    const result = num1 + num2;
-    console.log(num1, num2, result);
-    return result
-}
-const sum = add(5)
+// function add(num1, num2) {
+//     const result = num1 + num2;
+//     console.log(num1, num2, result);
+//     return result
+// }
+// const sum = add(5)
+
+//arrow function
