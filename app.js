@@ -13,7 +13,7 @@
 // }
 // const sum = add(5)
 
-//arrow function
+//arrow function----------
 function add(a, b) {  //func declaration
     return a + b;
 }
@@ -21,5 +21,15 @@ function add(a, b) {  //func declaration
 const add2 = function (a, b) { //func expression
     return a + b;
 }
-// console.log(add2(5, 90));
-add2(2, 5)
+/* arrow function is like function expression */
+const add3 = (a, b) => a + b; //arrow function
+
+const getAge = (age) => age.age;
+const person = {
+    name: 'imrna hasan',
+    age: 23
+}
+
+//no parenthesis for single parameter
+const myfunc = perm => perm + 5;
+console.log(myfunc(5));
