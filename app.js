@@ -35,5 +35,22 @@
 // console.log(myfunc(5));
 
 //...spread operator----------
-const numbers = [12, 25, 45, 35, 89, 75];
-console.log(Math.max(...numbers));
+// const numbers = [12, 25, 45, 35, 89, 75];
+// const maxNumber = Math.max(...numbers)
+// console.log(maxNumber);
+
+// Destructuring----------
+const person = {
+    name: 'imrna hasan',
+    age: 23,
+    profession: 'full stack engineer',
+    isMarried: true
+}
+const { name, age } = person; //destructuring by property name
+const { profession, age: boyos } = person; //destructuring by diffrent name
+//for array destructuring
+const friends = ['saad', 'najmul', 'ariful', 'abdur rahman', 'taijul', 'ibrahim', 'zahid']
+const [best, better] = friends;
+const [, , good, normal] = friends; //skiping by commas
+console.log(best);
+console.log(better, good, normal);
