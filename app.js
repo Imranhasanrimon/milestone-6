@@ -14,3 +14,12 @@
 // const sum = add(5)
 
 //arrow function
+function add(a, b) {  //func declaration
+    return a + b;
+}
+
+const add2 = function (a, b) { //func expression
+    return a + b;
+}
+// console.log(add2(5, 90));
+add2(2, 5)
