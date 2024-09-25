@@ -56,12 +56,12 @@
 // console.log(better, good, normal);
 
 //keys----------
-const person = {
-    name: 'imrna hasan',
-    age: 23,
-    profession: 'full stack engineer',
-    isMarried: true
-}
+// const person = {
+//     name: 'imrna hasan',
+//     age: 23,
+//     profession: 'full stack engineer',
+//     isMarried: true
+// }
 // const keys = Object.keys(person);
 // const values = Object.values(person)
 // // console.log(...keys, ...values); //spread recape
@@ -69,7 +69,12 @@ const person = {
 // //two dymensional array or array of array
 // const pair = Object.entries(person)
 // console.log(pair);
-console.log(person);
+// console.log(person);
 // delete person.isMarried;  //by delete keyword
-const { isMarried, ...newPersonObj } = person; //by destructuring form main
-console.log(newPersonObj);
+// const { isMarried, ...newPersonObj } = person; //by destructuring form main
+// console.log(newPersonObj);
+
+//swaping------
+let firstName = 'Imran', lastName = 'Hasan';
+[lastName, firstName] = [firstName, lastName]
+console.log(firstName, lastName);
