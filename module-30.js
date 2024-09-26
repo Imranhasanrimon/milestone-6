@@ -96,16 +96,32 @@
 
 /*            practice Problem2            */
 // task---1
-const friends = ['Najmul', 'Saad', 'Ariful', 'AB Rahman', 'Imran'];
+// const friends = ['Najmul', 'Saad', 'Ariful', 'AB Rahman', 'Imran'];
 
-const newArr = [];
-const isEven = (arr) => {
-    for (let i of arr) {
-        if (i.length % 2 === 0) {
-            newArr.push(i);
-        }
+// const newArr = [];
+// const isEven = (arr) => {
+//     for (let i of arr) {
+//         if (i.length % 2 === 0) {
+//             newArr.push(i);
+//         }
+//     }
+//     return newArr
+// }
+
+// console.log(isEven(friends));
+
+
+/*            practice Problem3            */
+const Problem3 = (numArray) => {
+    const squareArray = [];
+    let sum = 0;
+    for (let i of numArray) {
+        const square = i ** 2;
+        squareArray.push(square);
+        sum += square;
     }
-    return newArr
+    const average = sum / squareArray.length
+    return average
 }
-
-console.log(isEven(friends));
+const nums = [5, 7, 2, 6];
+console.log(Problem3(nums));
