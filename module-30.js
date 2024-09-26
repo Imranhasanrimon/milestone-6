@@ -85,3 +85,11 @@ const arrowFunc = (a, b, c) => a * b * c;
 console.log(arrowFunc(2, 4, 3));
 
 // task---2
+const tast2 = `
+I am a web developer
+I love to code
+I love to eat biriyani`;
+console.log(tast2);
+//task---3
+const task3 = (a, b = 5) => a + b;
+console.log(task3(2, 10));
