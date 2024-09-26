@@ -112,16 +112,26 @@
 
 
 /*            practice Problem3            */
-const Problem3 = (numArray) => {
-    const squareArray = [];
-    let sum = 0;
-    for (let i of numArray) {
-        const square = i ** 2;
-        squareArray.push(square);
-        sum += square;
-    }
-    const average = sum / squareArray.length
-    return average
-}
+// const Problem3 = (numArray) => {
+//     const squareArray = [];
+//     let sum = 0;
+//     for (let i of numArray) {
+//         const square = i ** 2;
+//         squareArray.push(square);
+//         sum += square;
+//     }
+//     const average = sum / squareArray.length
+//     return average
+// }
 const nums = [5, 7, 2, 6];
-console.log(Problem3(nums));
+// console.log(Problem3(nums));
+
+/*            practice Problem4            */
+const nums2 = [10, 20, 30, 40];
+const Problem4 = (arr1, arr2) => {
+    const newArr = [];
+    newArr.push(...arr1, ...arr2);
+    const maxNum = Math.max(...newArr);
+    return maxNum;
+}
+console.log(Problem4(nums, nums2));
