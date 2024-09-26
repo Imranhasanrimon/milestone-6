@@ -75,6 +75,13 @@
 // console.log(newPersonObj);
 
 //swaping------
-let firstName = 'Imran', lastName = 'Hasan';
-[lastName, firstName] = [firstName, lastName]
-console.log(firstName, lastName);
+// let firstName = 'Imran', lastName = 'Hasan';
+// [lastName, firstName] = [firstName, lastName]
+// console.log(firstName, lastName);
+
+/*            practice Problem1            */
+// task---1
+const arrowFunc = (a, b, c) => a * b * c;
+console.log(arrowFunc(2, 4, 3));
+
+// task---2
