@@ -123,15 +123,15 @@
 //     const average = sum / squareArray.length
 //     return average
 // }
-const nums = [5, 7, 2, 6];
 // console.log(Problem3(nums));
 
 /*            practice Problem4            */
-const nums2 = [10, 20, 30, 40];
-const Problem4 = (arr1, arr2) => {
-    const newArr = [];
-    newArr.push(...arr1, ...arr2);
-    const maxNum = Math.max(...newArr);
-    return maxNum;
-}
-console.log(Problem4(nums, nums2));
+// const nums2 = [10, 20, 30, 40];
+// const Problem4 = (arr1, arr2) => {
+//     const newArr = [];
+//     newArr.push(...arr1, ...arr2);
+//     const maxNum = Math.max(...newArr);
+//     return maxNum;
+// }
+// console.log(Problem4(nums, nums2));
+// const arrowFn = (a, a, a) => console.log(a);
