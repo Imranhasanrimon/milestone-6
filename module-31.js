@@ -13,3 +13,7 @@ console.log(nums.filter(n => n % 2 === 0));
 
 //Array Find------
 console.log(nums.find(n => n > 10)); // find will always give single first occurrence element that pass the condition. this is almost like filter but filter provides all elements that pass the condition with an array.
+
+//Array Reduce------
+const total = nums.reduce((p, c) => p + c, 0);
+console.log(total);
