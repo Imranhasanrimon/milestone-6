@@ -134,11 +134,18 @@
 // }
 // console.log(work(32));
 
-let x = 5;
-function change() {
-    x = 10;
-    console.log(x);
-};
-console.log(x);
-change()
+// function change() {
+//     let x = 10;
+// };
+// console.log(x);
+
+// var z = 1;
+// {
+//     var z = 2;
+// }
+// console.log(z);
+
+if (true) {
+    var x = 5;
+}
 console.log(x);
