@@ -133,25 +133,42 @@
 
 /*         practice map,filter,find          */
 // -----------------------------------------------------------
-// task 1
-const oddArray = [1, 3, 5, 7, 9];
-const forEvenArray = [];
-for (let i = 0; i < oddArray.length; i++) {
-    forEvenArray.push(oddArray[i] + 1)
-}
-console.log(forEvenArray);
-console.log(oddArray.map(i => i + 1));
+// // task 1
+// const oddArray = [1, 3, 5, 7, 9];
+// const forEvenArray = [];
+// for (let i = 0; i < oddArray.length; i++) {
+//     forEvenArray.push(oddArray[i] + 1)
+// }
+// console.log(forEvenArray);
+// console.log(oddArray.map(i => i + 1));
 
-// task 2
-const numArray = [33, 50, 79, 78, 90, 101, 30];
-console.log(numArray.filter(i => i % 10 === 0));
-console.log(numArray.find(i => i % 10 === 0));
+// // task 2
+// const numArray = [33, 50, 79, 78, 90, 101, 30];
+// numArray.length = 0
+// console.log(numArray);
+// console.log(numArray.filter(i => i % 10 === 0));
+// console.log(numArray.find(i => i % 10 === 0));
 
-// task 3
-const instructor = [
-    { name: 'Nodi', age: 28, position: 'Senior' },
-    { name: 'Akil', age: 20, position: 'Junior' },
-    { name: 'Shobuj', age: 38, position: 'Senior' },
-]
-const seior = instructor.filter(obj => obj.position === 'Senior');
-console.log(seior[0].name, seior[1].name);
+// // task 3
+// const instructor = [
+//     { name: 'Nodi', age: 28, position: 'Senior' },
+//     { name: 'Akil', age: 20, position: 'Junior' },
+//     { name: 'Shobuj', age: 38, position: 'Senior' },
+// ]
+// const seior = instructor.filter(obj => obj.position === 'Senior');
+// console.log(seior[0].name, seior[1].name);
+
+/*         Reduce()          */
+// -----------------------------------------------------------
+// const people = [
+//     { name: 'Meena', age: 20 },
+//     { name: 'Rina', age: 15 },
+//     { name: 'Suchorita', age: 22 },
+// ]
+// let totalAge = 0;
+// for (let i = 0; i < people.length; i++) {
+//     totalAge += people[i].age;
+// }
+// console.log(totalAge);
+// const rTotalAge = people.reduce((sum, person) => sum + person.age, 0);
+// console.log(rTotalAge);
