@@ -54,17 +54,57 @@
 // console.log(server());
 
 //=====callback=======
-function greeting(mornignFunc, name) {
-    mornignFunc(name);
-}
+// function greeting(mornignFunc, name) {
+//     mornignFunc(name);
+// }
 
-function mornignFunc(name) {
-    console.log('good morning', name);
-}
+// function mornignFunc(name) {
+//     console.log('good morning', name);
+// }
 
-function eveningFunc(name) {
-    console.log('good evenning', name);
+// function eveningFunc(name) {
+//     console.log('good evenning', name);
+// }
+// greeting(mornignFunc, 'imran')
+// greeting(mornignFunc, 'Rimon')
+// greeting(eveningFunc, 'Hasan')
+
+//=========Arguments=========
+// function sum(a, b, c) {
+//     const args = [...arguments];
+//     console.log(args);
+//     console.log(arguments);
+//     const result = a + b + c;
+//     console.log(sum.length);
+//     return result
+// }
+// const total = sum(10, 20, 30, 40);
+// console.log(total);
+// console.log(sum.length);
+
+//primitive types are passed by value
+//non primitive types are passed by reference
+
+// let a = 2;
+// let b = 3;
+// function multiply(a, b) {
+//     a = 5
+//     const result = a * b;
+//     return result;
+// }                              //this is primitive types
+
+// const value = multiply(a, b);
+// console.log(value);
+// console.log(a);
+
+const team1 = { name: 'Imran', age: 23 }
+const team2 = { name: 'Najmul', age: 25 }
+
+function change(team1, team2) {
+    team1.name = 'Saad';
+    team2.name = 'Ab Rahman'
+    console.log(team1, team2);
 }
-greeting(mornignFunc, 'imran')
-greeting(mornignFunc, 'Rimon')
-greeting(eveningFunc, 'Hasan')
+console.log(team1, team2);
+change(team1, team2)
+console.log(team1, team2);
