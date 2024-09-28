@@ -97,14 +97,19 @@
 // console.log(value);
 // console.log(a);
 
-const team1 = { name: 'Imran', age: 23 }
-const team2 = { name: 'Najmul', age: 25 }
+// const team1 = { name: 'Imran', age: 23 }
+// const team2 = { name: 'Najmul', age: 25 }
 
-function change(team1, team2) {
-    team1.name = 'Saad';
-    team2.name = 'Ab Rahman'
-    console.log(team1, team2);
-}
-console.log(team1, team2);
-change(team1, team2)
-console.log(team1, team2);
+// function change(team1, team2) {
+//     team1.name = 'Saad';
+//     team2.name = 'Ab Rahman'
+//     console.log(team1, team2);               //this is non primitive types
+// }
+// console.log(team1, team2);
+// change(team1, team2)
+// console.log(team1, team2);
+
+let p = 'Javascript';
+let q = p;
+p = 'React';
+console.log(q);
