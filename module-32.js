@@ -35,20 +35,36 @@
 // }
 
 //---------Closure------
-function kitchen() {
-    let roast = 0;
-    return function () {
-        roast++;
-        return roast
-    }
+// function kitchen() {
+//     let roast = 0;
+//     return function () {
+//         roast++;
+//         return roast
+//     }
+// }
+// const server = kitchen();
+// console.log(server());
+// console.log(server());
+// console.log(server());
+// console.log(server());
+// const server2 = kitchen();
+// console.log(server2());
+// console.log(server2());
+// console.log(server2());
+// console.log(server());
+
+//=====callback=======
+function greeting(mornignFunc, name) {
+    mornignFunc(name);
 }
-const server = kitchen();
-console.log(server());
-console.log(server());
-console.log(server());
-console.log(server());
-const server2 = kitchen();
-console.log(server2());
-console.log(server2());
-console.log(server2());
-console.log(server());
+
+function mornignFunc(name) {
+    console.log('good morning', name);
+}
+
+function eveningFunc(name) {
+    console.log('good evenning', name);
+}
+greeting(mornignFunc, 'imran')
+greeting(mornignFunc, 'Rimon')
+greeting(eveningFunc, 'Hasan')
