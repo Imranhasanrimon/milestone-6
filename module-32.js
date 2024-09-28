@@ -133,3 +133,12 @@
 //     return x + y;
 // }
 // console.log(work(32));
+
+let x = 5;
+function change() {
+    x = 10;
+    console.log(x);
+};
+console.log(x);
+change()
+console.log(x);
