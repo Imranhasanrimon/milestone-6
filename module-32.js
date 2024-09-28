@@ -29,7 +29,26 @@
 //     console.log('hoistionb');
 // }
 
-myFunc()
-const myFunc = function () {
-    console.log('func expression');
+// myFunc()
+// const myFunc = function () {
+//     console.log('func expression');
+// }
+
+//---------Closure------
+function kitchen() {
+    let roast = 0;
+    return function () {
+        roast++;
+        return roast
+    }
 }
+const server = kitchen();
+console.log(server());
+console.log(server());
+console.log(server());
+console.log(server());
+const server2 = kitchen();
+console.log(server2());
+console.log(server2());
+console.log(server2());
+console.log(server());
