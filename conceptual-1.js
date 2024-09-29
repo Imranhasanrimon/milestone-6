@@ -26,6 +26,23 @@
 // console.log(arr2);
 
 //destructuring from an array
-const names = ['Najmul', 'Saad', 'Ariful'];
-const [_, x] = names;     //skiping by underscore for single time but for multiple time, we should use diffrent variables
-console.log(x);
+// const names = ['Najmul', 'Saad', 'Ariful'];
+// const [_, x] = names;     //skiping by underscore for single time but for multiple time, we should use diffrent variables
+// console.log(x);
+
+
+//destructuring from an object
+const myInfo = {
+    name: 'imran hasan',
+    age: 23,
+    dist: 'Bogura',
+    isMarried: false,
+    constact: {
+        email: 'imranhasanrimon5@gmail.com',
+        mobile: '01743-621957'
+    }
+}
+const { constact: { email } } = myInfo;
+// console.log(constact);
+// const { email } = constact;
+console.log(email);
