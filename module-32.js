@@ -145,7 +145,34 @@
 // }
 // console.log(z);
 
-if (true) {
-    var x = 5;
+// function fkjlsa() {
+//     var x = 5
+// }
+// console.log(x);
+
+// let x = 5;
+// if (true) {
+//     let x = 10;
+// }
+// console.log(x);
+
+// function test() {
+//     let a = 10;
+//     if (true) {
+//         let a = 20;
+//         console.log(a);
+//     }
+//     console.log(a);
+// }
+// test();
+
+
+var sum = function () {
+    var num1 = 2;
+    var num2 = 3;
+
+    return function () {
+        num1 + num2;
+    }
 }
-console.log(x);
+console.dir(sum());
