@@ -32,17 +32,34 @@
 
 
 //destructuring from an object
-const myInfo = {
-    name: 'imran hasan',
-    age: 23,
-    dist: 'Bogura',
-    isMarried: false,
-    constact: {
-        email: 'imranhasanrimon5@gmail.com',
-        mobile: '01743-621957'
-    }
-}
-const { constact: { email } } = myInfo;
-// console.log(constact);
-// const { email } = constact;
-console.log(email);
+// const myInfo = {
+//     name: 'imran hasan',
+//     age: 23,
+//     dist: 'Bogura',
+//     isMarried: false,
+//     constact: {
+//         email: 'imranhasanrimon5@gmail.com',
+//         mobile: '01743-621957'
+//     }
+// }
+// const { constact: { email }, age } = myInfo;
+// // console.log(constact);
+// // const { email } = constact;
+// console.log(email);
+// myInfo.age = 25;
+// console.log(age);
+// console.log(myInfo);
+
+//optional chaining
+// console.log(myInfo.address?.village);
+
+// forEach method in array 
+const array = [10, 20, 30, 40, 50, 60, 70, 80];
+// const double = array.map((i) => i * 2)
+// console.log(double);
+
+// find method for getting the first occurrane
+const find = array.find((e) => e > 50);
+const filter = array.filter((e) => e > 50);
+console.log(find);
+console.log(filter);
