@@ -53,13 +53,39 @@
 //optional chaining
 // console.log(myInfo.address?.village);
 
-// forEach method in array 
-const array = [10, 20, 30, 40, 50, 60, 70, 80];
+// forEach method in array
+// const array = [10, 20, 30, 40, 50, 60, 70, 80];
 // const double = array.map((i) => i * 2)
 // console.log(double);
 
 // find method for getting the first occurrane
-const find = array.find((e) => e > 50);
-const filter = array.filter((e) => e > 50);
-console.log(find);
-console.log(filter);
+// const find = array.find((e) => e > 50);
+// const filter = array.filter((e) => e > 50);
+// console.log(find);
+// console.log(filter);
+// console.log(!![]);
+
+// //solution-1
+// const nums = [2, 5, 7, 1];
+// const solution = nums.reduce((accumulator, current) => accumulator + current)
+// console.log(solution);
+
+// //solution-2
+// const nums2 = [2, 3, 4];
+// const solution2 = nums2.reduce((accumulator, current) => accumulator * current, 1);
+// console.log(solution2);
+
+// //solution-3
+// const words = ['apple', 'banana', 'pineapple', 'mango'];
+// const solution3 = words.reduce((accumulator, current) => accumulator > current.length, 0);
+// console.log(solution3);
+
+// //solution-4
+// const words2 = ['apple', 'banana', 'mango'];
+// const solution4 = words2.reduce((accumulator, current) => accumulator + current.length, 0);
+// console.log(solution4);
+
+// //solution-5
+// const nums3 = [10, 22, 5, 3, 99, 7];
+// const solution5 = nums3.reduce((accumulator, current) =>);
+// console.log(solution5);
