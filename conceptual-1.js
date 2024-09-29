@@ -18,9 +18,14 @@
 // console.log(x || 'or right side');
 
 //spread operator for copying
-const arr1 = [1, 2, 3, 4];
-const arr2 = [...arr1];
-arr1.push(100);
-arr2.push(200)
-console.log(arr1);
-console.log(arr2);
+// const arr1 = [1, 2, 3, 4];
+// const arr2 = [...arr1];
+// arr1.push(100);
+// arr2.push(200)
+// console.log(arr1);
+// console.log(arr2);
+
+//destructuring from an array
+const names = ['Najmul', 'Saad', 'Ariful'];
+const [_, x] = names;     //skiping by underscore for single time but for multiple time, we should use diffrent variables
+console.log(x);
