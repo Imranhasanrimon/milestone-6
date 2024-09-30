@@ -224,35 +224,64 @@
 // const suffixAdded = array5.map((e) => e + 'ing');
 // console.log(suffixAdded);
 
-// Convert to Lengths
-const array1 = ['hello', 'world', 'JavaScript'];
-const array1Lengnths = array1.map((e) => e.length);
-console.log(array1Lengnths);
+// // Convert to Lengths
+// const array1 = ['hello', 'world', 'JavaScript'];
+// const array1Lengnths = array1.map((e) => e.length);
+// console.log(array1Lengnths);
 
-// Get Price Tags
-const array2 = [10, 20, 30];
-const priceFormatted = array2.map((e) => `$${e}`);
-console.log(priceFormatted);
+// // Get Price Tags
+// const array2 = [10, 20, 30];
+// const priceFormatted = array2.map((e) => `$${e}`);
+// console.log(priceFormatted);
 
-// Square Roots
-const array3 = [1, 4, 9, 16];
-const sqrt = array3.map((e) => Math.sqrt(e));
-console.log(sqrt);
+// // Square Roots
+// const array3 = [1, 4, 9, 16];
+// const sqrt = array3.map((e) => Math.sqrt(e));
+// console.log(sqrt);
 
-// Convert to Objects
-const array4 = ['red', 'green', 'blue'];
-const arrayOfObject = array4.map((e) => {
-    const obj = {};
-    obj.color = e;
-    return obj;
-})
-console.log(arrayOfObject);
+// // Convert to Objects
+// const array4 = ['red', 'green', 'blue'];
+// const arrayOfObject = array4.map((e) => {
+//     const obj = {};
+//     obj.color = e;
+//     return obj;
+// })
+// console.log(arrayOfObject);
 
-// Extract Initials
-const array5 = [
+// // Extract Initials
+// const array5 = [
+//     { firstName: 'John', lastName: 'Doe' },
+//     { firstName: 'Jane', lastName: 'Smith' },
+//     { firstName: 'Alice', lastName: 'Johnson' }
+// ]
+// const Initials = array5.map((e) => `${e.firstName[0]}.${e.lastName[0]}`);
+// console.log(Initials);
+
+// Reverse Strings
+const array1 = ['abc', 'def', 'ghi'];
+const reversed = array1.map(e => e.split('').reverse().join(''))
+console.log(reversed);
+
+// Convert to Boolean
+const array2 = [0, 1, '', 'Hello', null, 42];
+const boolean = array2.map((e) => !!e);
+console.log(boolean);
+
+// Get Full Names
+const array3 = [
     { firstName: 'John', lastName: 'Doe' },
     { firstName: 'Jane', lastName: 'Smith' },
     { firstName: 'Alice', lastName: 'Johnson' }
-]
-const Initials = array5.map((e) => `${e.firstName[0]}.${e.lastName[0]}`);
-console.log(Initials);
+];
+const fullNames = array3.map((e) => `${e.firstName} ${e.lastName}`);
+console.log(fullNames);
+
+// Multiply by Index
+const array4 = [1, 2, 3, 4];
+const mulByInd = array4.map((e, i) => e * i);
+console.log(mulByInd);
+
+// Extract Year
+const array5 = ['2021-01-01', '2022-05-15', '2023-07-20'];
+const years = array5.map((e) => new Date(e).getFullYear());
+console.log(years);
