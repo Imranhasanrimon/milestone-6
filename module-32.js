@@ -292,31 +292,60 @@
 // const even = array1.map((e) => e > 50)
 // console.log(even);
 
-// Get Odd Numbers
-const array1 = [1, 2, 3, 4, 5, 6];
-const print = array1.filter((e) => e % 2 !== 0);
-console.log(print);
+// // Get Odd Numbers
+// const array1 = [1, 2, 3, 4, 5, 6];
+// const print = array1.filter((e) => e % 2 !== 0);
+// console.log(print);
 
-// Filter Long Words
-const array2 = ['apple', 'banana', 'cherry', 'kiwi', 'melon'];
-const longWords = array2.filter((e) => e.length > 5)
-console.log(longWords);
+// // Filter Long Words
+// const array2 = ['apple', 'banana', 'cherry', 'kiwi', 'melon'];
+// const longWords = array2.filter((e) => e.length > 5)
+// console.log(longWords);
 
-// Filter Adults
-const array3 = [
-    { name: 'Alice', age: 25 },
-    { name: 'Bob', age: 17 },
-    { name: 'Charlie', age: 30 }
-]
-const adults = array3.filter((e) => e.age >= 18);
-console.log(adults);
+// // Filter Adults
+// const array3 = [
+//     { name: 'Alice', age: 25 },
+//     { name: 'Bob', age: 17 },
+//     { name: 'Charlie', age: 30 }
+// ]
+// const adults = array3.filter((e) => e.age >= 18);
+// console.log(adults);
 
-// Filter Positive Numbers
-const array4 = [-3, -2, -1, 0, 1, 2, 3];
-const posNums = array4.filter((e) => e > 0);
-console.log(posNums);
+// // Filter Positive Numbers
+// const array4 = [-3, -2, -1, 0, 1, 2, 3];
+// const posNums = array4.filter((e) => e > 0);
+// console.log(posNums);
 
-// Filter Unique Values
-const array5 = [1, 2, 2, 3, 4, 4, 5];
-const uniqueValues = array5.filter((e) => array5.indexOf(e) === array5.lastIndexOf(e))
-console.log(uniqueValues);
+// // Filter Unique Values
+// const array5 = [1, 2, 2, 3, 4, 4, 5];
+// const uniqueValues = array5.filter((e) => array5.indexOf(e) === array5.lastIndexOf(e))
+// console.log(uniqueValues);
+
+// Filter Even Numbers
+const array1 = [10, 15, 20, 25, 30]
+const even = array1.filter((e) => e % 2 === 0);
+console.log(even);
+
+// Filter Short Words
+const array2 = ['cat', 'elephant', 'dog', 'mouse'];
+const shortWords = array2.filter((e) => e.length <= 3);
+console.log(shortWords);
+
+// Filter Out Falsy Values
+const array3 = [0, 'Hello', false, null, 42, '', undefined];
+const truthyValues = array3.filter((e) => !!e);
+console.log(truthyValues);
+
+// Filter Names Starting with 'J'
+const array4 = ['John', 'Alice', 'Jane', 'Bob'];
+const j = array4.filter((e) => e[0] === 'J' || e[0] === 'j');
+console.log(j);
+
+// Filter Ages Below 21
+const array5 = [
+    { name: 'Alice', age: 20 },
+    { name: 'Bob', age: 22 },
+    { name: 'Charlie', age: 19 }
+];
+const below21 = array5.filter((e) => e.age < 21);
+console.log(below21);
