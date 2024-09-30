@@ -195,31 +195,64 @@
 // const arr4 = [1, 2, 3, 22, 10, 3, 6, 9];
 
 
-// Double the Numbers
-const array = [1, 2, 3, 4, 5];
-const doubled = array.map((e) => e * 2);
-console.log(doubled);
+// // Double the Numbers
+// const array = [1, 2, 3, 4, 5];
+// const doubled = array.map((e) => e * 2);
+// console.log(doubled);
 
-// Convert to Uppercase
-const array2 = ['apple', 'banana', 'cherry'];
-const upperCase = array2.map((e) => e.toUpperCase());
-console.log(upperCase);
+// // Convert to Uppercase
+// const array2 = ['apple', 'banana', 'cherry'];
+// const upperCase = array2.map((e) => e.toUpperCase());
+// console.log(upperCase);
 
-// Extract First Names
-const array3 = [
+// // Extract First Names
+// const array3 = [
+//     { firstName: 'John', lastName: 'Doe' },
+//     { firstName: 'Jane', lastName: 'Smith' },
+//     { firstName: 'Alice', lastName: 'Johnson' }
+// ]
+// const firstName = array3.map((e) => e.firstName);
+// console.log(firstName);
+
+// // Square the Numbers
+// const array4 = [2, 4, 6, 8, 10];
+// const squared = array4.map((e) => Math.pow(e, 2));
+// console.log(squared);
+
+// // Add Suffix
+// const array5 = ['run', 'jump', 'swim'];
+// const suffixAdded = array5.map((e) => e + 'ing');
+// console.log(suffixAdded);
+
+// Convert to Lengths
+const array1 = ['hello', 'world', 'JavaScript'];
+const array1Lengnths = array1.map((e) => e.length);
+console.log(array1Lengnths);
+
+// Get Price Tags
+const array2 = [10, 20, 30];
+const priceFormatted = array2.map((e) => `$${e}`);
+console.log(priceFormatted);
+
+// Square Roots
+const array3 = [1, 4, 9, 16];
+const sqrt = array3.map((e) => Math.sqrt(e));
+console.log(sqrt);
+
+// Convert to Objects
+const array4 = ['red', 'green', 'blue'];
+const arrayOfObject = array4.map((e) => {
+    const obj = {};
+    obj.color = e;
+    return obj;
+})
+console.log(arrayOfObject);
+
+// Extract Initials
+const array5 = [
     { firstName: 'John', lastName: 'Doe' },
     { firstName: 'Jane', lastName: 'Smith' },
     { firstName: 'Alice', lastName: 'Johnson' }
 ]
-const firstName = array3.map((e) => e.firstName);
-console.log(firstName);
-
-// Square the Numbers
-const array4 = [2, 4, 6, 8, 10];
-const squared = array4.map((e) => Math.pow(e, 2));
-console.log(squared);
-
-// Add Suffix
-const array5 = ['run', 'jump', 'swim'];
-const suffixAdded = array5.map((e) => e + 'ing');
-console.log(suffixAdded);
+const Initials = array5.map((e) => `${e.firstName[0]}.${e.lastName[0]}`);
+console.log(Initials);
