@@ -177,19 +177,49 @@
 // }
 // console.dir(sum());
 
-//     solution 1
-const arr = [10, 20, 30, 40, 50];
-const total = arr.reduce((accumulator, cu) => accumulator + cu, 0);
-console.log(total);
+// //     solution 1
+// const arr = [10, 20, 30, 40, 50];
+// const total = arr.reduce((accumulator, cu) => accumulator + cu, 0);
+// console.log(total);
 
-//     solution 2
-const arr2 = [1, 2, 3, 5];
-const product = arr2.reduce((accumulator, current) => accumulator * current, 1);
-console.log(product);
+// //     solution 2
+// const arr2 = [1, 2, 3, 5];
+// const product = arr2.reduce((accumulator, current) => accumulator * current, 1);
+// console.log(product);
 
-//     solution 3
-const arr3 = [1, 2, 3, 22, 10, 3, 6, 9];
-// const largestNum = arr3.reduce((accumulator,current)=> current?accumulator )
+// //     solution 3
+// const arr3 = [1, 2, 3, 22, 10, 3, 6, 9];
+// const largestNum = arr3.find((element))
 
-//     solution 4
-const arr4 = [1, 2, 3, 22, 10, 3, 6, 9];
+// //     solution 4
+// const arr4 = [1, 2, 3, 22, 10, 3, 6, 9];
+
+
+// Double the Numbers
+const array = [1, 2, 3, 4, 5];
+const doubled = array.map((e) => e * 2);
+console.log(doubled);
+
+// Convert to Uppercase
+const array2 = ['apple', 'banana', 'cherry'];
+const upperCase = array2.map((e) => e.toUpperCase());
+console.log(upperCase);
+
+// Extract First Names
+const array3 = [
+    { firstName: 'John', lastName: 'Doe' },
+    { firstName: 'Jane', lastName: 'Smith' },
+    { firstName: 'Alice', lastName: 'Johnson' }
+]
+const firstName = array3.map((e) => e.firstName);
+console.log(firstName);
+
+// Square the Numbers
+const array4 = [2, 4, 6, 8, 10];
+const squared = array4.map((e) => Math.pow(e, 2));
+console.log(squared);
+
+// Add Suffix
+const array5 = ['run', 'jump', 'swim'];
+const suffixAdded = array5.map((e) => e + 'ing');
+console.log(suffixAdded);
