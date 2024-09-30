@@ -245,18 +245,39 @@
 // const result = findSCIC(students);
 // console.log(result);
 
-const grooms = [
-    { name: 'abul', job: 'public', salary: 17000 },
-    { name: 'babul', job: 'privat', salary: 25000 },
-    { name: 'kabul', job: 'public', salary: 21000 },
-    { name: 'habul', job: 'privat', salary: 47000 },
-    { name: 'jabul', job: 'public', salary: 23000 },
-    { name: 'mabul', job: 'privat', salary: 55000 },
-];
-const eligible = grooms.filter((groom) => (groom.job === 'public' && groom.salary >= 20000) || (groom.job === 'privat' && groom.salary >= 40000));
-console.log(eligible);
-const names = eligible.map((i) => i.name);
-console.log(names);
-const lottery = Math.floor(Math.random() * names.length);
-console.log(lottery);
-console.log(names[lottery], 'you are eligible');
+// const grooms = [
+//     { name: 'abul', job: 'public', salary: 17000 },
+//     { name: 'babul', job: 'privat', salary: 25000 },
+//     { name: 'kabul', job: 'public', salary: 21000 },
+//     { name: 'habul', job: 'privat', salary: 47000 },
+//     { name: 'jabul', job: 'public', salary: 23000 },
+//     { name: 'mabul', job: 'privat', salary: 55000 },
+// ];
+// const eligible = grooms.filter((groom) => (groom.job === 'public' && groom.salary >= 20000) || (groom.job === 'privat' && groom.salary >= 40000));
+// console.log(eligible);
+// const names = eligible.map((i) => i.name);
+// console.log(names);
+// const lottery = Math.floor(Math.random() * names.length);
+// console.log(lottery);
+// console.log(names[lottery], 'you are eligible');
+
+//____________________________EXECUTION CONTEXT____________________________
+// function sayName() {
+//     var name = "someName";
+//     console.log("The name is,", name);
+// }
+// sayName()
+
+// console.log('name is ', name);
+// var name;
+// name = 'tom';
+// console.log('name is ', name);
+
+myFunc()
+function myFunc() {
+    console.log('this is regular function');
+}
+expFunc()
+const expFunc = function () {
+    console.log('this is function as expression');
+}
