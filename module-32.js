@@ -257,31 +257,37 @@
 // const Initials = array5.map((e) => `${e.firstName[0]}.${e.lastName[0]}`);
 // console.log(Initials);
 
-// Reverse Strings
-const array1 = ['abc', 'def', 'ghi'];
-const reversed = array1.map(e => e.split('').reverse().join(''))
-console.log(reversed);
+// // Reverse Strings
+// const array1 = ['abc', 'def', 'ghi'];
+// const reversed = array1.map(e => e.split('').reverse().join(''))
+// console.log(reversed);
 
-// Convert to Boolean
-const array2 = [0, 1, '', 'Hello', null, 42];
-const boolean = array2.map((e) => !!e);
-console.log(boolean);
+// // Convert to Boolean
+// const array2 = [0, 1, '', 'Hello', null, 42];
+// const boolean = array2.map((e) => !!e);
+// console.log(boolean);
 
-// Get Full Names
-const array3 = [
-    { firstName: 'John', lastName: 'Doe' },
-    { firstName: 'Jane', lastName: 'Smith' },
-    { firstName: 'Alice', lastName: 'Johnson' }
-];
-const fullNames = array3.map((e) => `${e.firstName} ${e.lastName}`);
-console.log(fullNames);
+// // Get Full Names
+// const array3 = [
+//     { firstName: 'John', lastName: 'Doe' },
+//     { firstName: 'Jane', lastName: 'Smith' },
+//     { firstName: 'Alice', lastName: 'Johnson' }
+// ];
+// const fullNames = array3.map((e) => `${e.firstName} ${e.lastName}`);
+// console.log(fullNames);
 
-// Multiply by Index
-const array4 = [1, 2, 3, 4];
-const mulByInd = array4.map((e, i) => e * i);
-console.log(mulByInd);
+// // Multiply by Index
+// const array4 = [1, 2, 3, 4];
+// const mulByInd = array4.map((e, i) => e * i);
+// console.log(mulByInd);
 
-// Extract Year
-const array5 = ['2021-01-01', '2022-05-15', '2023-07-20'];
-const years = array5.map((e) => new Date(e).getFullYear());
-console.log(years);
+// // Extract Year
+// const array5 = ['2021-01-01', '2022-05-15', '2023-07-20'];
+// const years = array5.map((e) => new Date(e).getFullYear());
+// console.log(years);
+
+
+// Get Even Numbers
+const array1 = [1, 2, 3, 4, 5, 6];
+const even = array1.map((e) => e > 50)
+console.log(even);
