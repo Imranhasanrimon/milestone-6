@@ -167,12 +167,29 @@
 // test();
 
 
-var sum = function () {
-    var num1 = 2;
-    var num2 = 3;
+// var sum = function () {
+//     var num1 = 2;
+//     var num2 = 3;
 
-    return function () {
-        num1 + num2;
-    }
-}
-console.dir(sum());
+//     return function () {
+//         num1 + num2;
+//     }
+// }
+// console.dir(sum());
+
+//     solution 1
+const arr = [10, 20, 30, 40, 50];
+const total = arr.reduce((accumulator, cu) => accumulator + cu, 0);
+console.log(total);
+
+//     solution 2
+const arr2 = [1, 2, 3, 5];
+const product = arr2.reduce((accumulator, current) => accumulator * current, 1);
+console.log(product);
+
+//     solution 3
+const arr3 = [1, 2, 3, 22, 10, 3, 6, 9];
+// const largestNum = arr3.reduce((accumulator,current)=> current?accumulator )
+
+//     solution 4
+const arr4 = [1, 2, 3, 22, 10, 3, 6, 9];
