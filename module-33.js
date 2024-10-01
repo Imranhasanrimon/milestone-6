@@ -52,25 +52,29 @@
 // }
 
 //----------=====loading post=====----------
-function apiCall() {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(res => res.json())
-        .then(data => showPosts(data))
-}
+// function apiCall() {
+//     fetch('https://jsonplaceholder.typicode.com/posts')
+//         .then(res => res.json())
+//         .then(data => showPosts(data))
+// }
 
-function showPosts(posts) {
-    const container = document.getElementById('post-container');
+// function showPosts(posts) {
+//     const container = document.getElementById('post-container');
 
-    for (let post of posts) {
-        const div = document.createElement('div');
-        div.classList.add('post')
-        div.innerHTML = `
-        <h2>${post.id}</h2>
-        <h3>${post.title}</h3>
-        <h4>${post.body}</h4>
-        `;
-        container.append(div);
-    }
-}
+//     for (let post of posts) {
+//         const div = document.createElement('div');
+//         div.classList.add('post')
+//         div.innerHTML = `
+//         <h2>${post.id}</h2>
+//         <h3>${post.title}</h3>
+//         <h4>${post.body}</h4>
+//         `;
+//         container.append(div);
+//     }
+// }
 
-apiCall()
+// apiCall()
+
+//----------==========quiz===========-----------
+const stuInfo = JSON.stringify({ name: "James", roll: 3 });
+console.log(stuInfo.name?.roll); 
