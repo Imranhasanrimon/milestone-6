@@ -5,8 +5,7 @@ function displayer(result) {
 
 function calculate(a, b) {
     const sum = a + b;
-    return sum;
+    displayer(sum)
 }
 
-const result = calculate(10, 5);
-displayer(result)
+calculate(7, 2)
