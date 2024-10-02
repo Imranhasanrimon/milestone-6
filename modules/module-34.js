@@ -51,3 +51,10 @@ const filterEvens = (arr, callback) => {
 const callback3 = (arr) => arr.filter((e) => e % 2 === 0);
 const Numbers = [1, 3, 4, 8, 7, 10, 5, 15]
 filterEvens(Numbers, callback3)
+
+// Problem 4: Array Lengths
+const getLengths = (arr, callback) => console.log(callback(arr));
+
+const callback4 = (arr) => arr.map((e) => e.length)
+const names = ['imran', 'najmul', 'saad'];
+getLengths(names, callback4)
