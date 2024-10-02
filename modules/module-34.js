@@ -24,9 +24,30 @@
 
 
 //callback problems---------
+
+// Problem 1: Greeting Callback
 const greet = (name, callback) => {
-    console.log(callback(), name);
+    console.log(callback(name));
 };
 
-const callback = () => 'hellow';
+const callback = (nam) => 'hellow ' + nam;
 greet('Imran', callback)
+
+
+// Problem 2: Array Squaring
+const squareArray = (array, callback) => {
+    console.log(callback(array));
+};
+
+const callback2 = (array) => array.map((ele) => ele ** 2)
+const array = [2, 4, 3, 5]
+squareArray(array, callback2)
+
+// Problem 3: Filter Even Numbers
+const filterEvens = (arr, callback) => {
+    console.log(callback(arr));
+}
+
+const callback3 = (arr) => arr.filter((e) => e % 2 === 0);
+const Numbers = [1, 3, 4, 8, 7, 10, 5, 15]
+filterEvens(Numbers, callback3)
