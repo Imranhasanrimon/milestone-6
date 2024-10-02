@@ -21,9 +21,12 @@
 
 // console.log('line 3');
 
-//example
+
+/*
+___________________________________________________________
+//example of callback pattern
 const paymentSuccessful = true;
-const marks = 79;
+const marks = 89;
 
 function enroll(callback) {
     console.log('Enrollment is in progress');
@@ -49,7 +52,7 @@ function progress(callback) {
 }
 
 function certificate() {
-    console.log('preparign crfct');
+    console.log('preparing certificate');
     setTimeout(function () {
         console.log('you got the certificate');
     }, 800)
@@ -57,3 +60,33 @@ function certificate() {
 enroll(function () {
     progress(certificate)
 })
+___________________________________________________________
+*/
+
+// Promises
+const condition = false;
+
+console.log('Task 1');
+
+//defining promise function
+const promise = new Promise(function (resolve, reject) {
+
+    setTimeout(function () {
+        if (condition) {
+            resolve('Task 2');
+        } else {
+            reject('failed');
+        }
+    }, 500)
+
+})
+
+promise
+    .then(function (value) {
+        console.log(value);
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
+
+console.log('Task 3');
