@@ -57,4 +57,11 @@ const getLengths = (arr, callback) => console.log(callback(arr));
 
 const callback4 = (arr) => arr.map((e) => e.length)
 const names = ['imran', 'najmul', 'saad'];
-getLengths(names, callback4)
+getLengths(names, callback4);
+
+// Problem 5: Convert to Uppercase
+const toUpperCaseArray = (arr, callback) => console.log(callback(arr));
+
+const callback5 = (arr) => arr.map((e) => e.toUpperCase())
+
+toUpperCaseArray(names, callback5)
