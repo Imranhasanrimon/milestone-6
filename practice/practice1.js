@@ -96,6 +96,8 @@ console.log('Task 3');
 ___________________________________________________________
 */
 
+/*
+___________________________________________________________
 //example of promise
 const paymentSuccessful = false;
 const marks = 89;
@@ -153,3 +155,86 @@ enroll()
     .catch(function (error) {
         console.log(error);
     })
+___________________________________________________________
+*/
+
+
+/*
+___________________________________________________________
+//ASYNC,AWAIT 
+
+
+
+
+const paymentSuccessful = true;
+const marks = 69;
+
+function enroll() {
+    console.log('course enrollment is in progress');
+
+    const promise = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            if (paymentSuccessful) {
+                resolve();
+            } else {
+                reject('payment faild');
+            }
+        }, 2000)
+    })
+
+    return promise;
+}
+
+function progress() {
+    console.log('course is in progress');
+
+    const promise = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            if (marks >= 80) {
+                resolve();
+            } else {
+                reject('you could not get enough marks');
+            }
+        }, 1000)
+    })
+
+    return promise;
+}
+
+function getCertificate() {
+    console.log('preparing certificate');
+
+    const promise = new Promise(function (resolve) {
+        setTimeout(function () {
+            resolve('you got the certificate');
+        }, 800)
+    })
+
+    return promise;
+}
+
+async function course() {
+    try {
+        await enroll();
+        await progress();
+        const message = await getCertificate();
+        console.log(message);
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+course()
+
+
+// enroll()
+//     .then(progress)
+//     .then(getCertificate)
+//     .then(function (value) {
+//         console.log(value);
+//     })
+//     .catch(function (error) {
+//         console.log(error);
+//     })
+
+*/
