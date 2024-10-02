@@ -63,12 +63,14 @@ enroll(function () {
 ___________________________________________________________
 */
 
-// Promises
-const condition = false;
+/*
+___________________________________________________________
+// Promises syntax
+const condition = true;
 
 console.log('Task 1');
 
-//defining promise function
+//defining promise function / producing code
 const promise = new Promise(function (resolve, reject) {
 
     setTimeout(function () {
@@ -81,6 +83,7 @@ const promise = new Promise(function (resolve, reject) {
 
 })
 
+//calling promise function / consuming code
 promise
     .then(function (value) {
         console.log(value);
@@ -90,3 +93,63 @@ promise
     })
 
 console.log('Task 3');
+___________________________________________________________
+*/
+
+//example of promise
+const paymentSuccessful = false;
+const marks = 89;
+
+function enroll() {
+    console.log('course enrollment is in progress');
+
+    const promise = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            if (paymentSuccessful) {
+                resolve();
+            } else {
+                reject('payment faild');
+            }
+        }, 2000)
+    })
+
+    return promise;
+}
+
+function progress() {
+    console.log('course is in progress');
+
+    const promise = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            if (marks >= 80) {
+                resolve();
+            } else {
+                reject('you could not get enough marks');
+            }
+        }, 1000)
+    })
+
+    return promise;
+}
+
+function getCertificate() {
+    console.log('preparing certificate');
+
+    const promise = new Promise(function (resolve) {
+        setTimeout(function () {
+            resolve('you got the certificate');
+        }, 800)
+    })
+
+    return promise;
+}
+
+enroll()
+    .then(progress)
+    .then(getCertificate)
+    .then(function (value) {
+        console.log(value);
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
