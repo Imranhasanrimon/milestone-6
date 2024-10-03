@@ -1,3 +1,14 @@
+//get time
+function getTimeString(time) {
+    //get hours and rest seconds
+    const hour = parseInt(time / 3600);
+    let remainingSecond = (time % 3600);
+    const minute = parseInt(remainingSecond / 60);
+    remainingSecond %= 60;
+
+    return `${hour} hours ${minute} minutes ${remainingSecond} ago`
+}
+
 const loadCategories = () => {
     //fetch the data
     fetch('https://openapi.programming-hero.com/api/phero-tube/categories')
@@ -42,7 +53,7 @@ const displayVideos = (videos) => {
     <img
       src="${item.thumbnail}" class="h-full w-full object-cover"
       alt="Shoes" />
-      ${item.others.posted_date?.length == 0 ? "" : ` <span class="absolute right-2 bottom-2 bg-black text-white rounded p-1">${item.others.posted_date}</span>`}
+      ${item.others.posted_date?.length == 0 ? "" : ` <span class="absolute right-2 bottom-2 bg-black text-white text-xs rounded p-1">${getTimeString(item.others.posted_date)}</span>`}
      
   </figure>
   <div class="px-0 py-2 flex gap-2s">
@@ -62,7 +73,7 @@ const displayVideos = (videos) => {
   </div>
        `
         videoContainer.append(card)
-        console.log(item);
+        // console.log(item);
     })
 }
 
@@ -86,3 +97,4 @@ const displayCategories = (categories) => {
 
 loadCategories()
 loadVideos()
+
