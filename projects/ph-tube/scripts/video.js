@@ -13,24 +13,24 @@ const loadVideos = () => {
         .then(data => displayVideos(data.videos))
         .catch(err => console.log(err))
 }
-const demo = {
-    "category_id": "1003",
-    "video_id": "aaaf",
-    "thumbnail": "https://i.ibb.co/5LRQkKF/stick-and-stones.jpg",
-    "title": "Sticks & Stones",
-    "authors": [
-        {
-            "profile_picture": "https://i.ibb.co/rdTZrCM/dev.jpg",
-            "profile_name": "Dave Chappelle",
-            "verified": true
-        }
-    ],
-    "others": {
-        "views": "113K",
-        "posted_date": ""
-    },
-    "description": "Dave Chappelle's 'Sticks & Stones' has garnered 113K views and remains a controversial yet highly engaging piece of stand-up comedy. Known for his fearless approach, Dave dives into a wide range of topics, delivering his unique perspective with wit and sharp humor. As a verified artist, Dave's comedy is raw, honest, and unapologetically funny."
-}
+// const demo = {
+//     "category_id": "1003",
+//     "video_id": "aaaf",
+//     "thumbnail": "https://i.ibb.co/5LRQkKF/stick-and-stones.jpg",
+//     "title": "Sticks & Stones",
+//     "authors": [
+//         {
+//             "profile_picture": "https://i.ibb.co/rdTZrCM/dev.jpg",
+//             "profile_name": "Dave Chappelle",
+//             "verified": true
+//         }
+//     ],
+//     "others": {
+//         "views": "113K",
+//         "posted_date": ""
+//     },
+//     "description": "Dave Chappelle's 'Sticks & Stones' has garnered 113K views and remains a controversial yet highly engaging piece of stand-up comedy. Known for his fearless approach, Dave dives into a wide range of topics, delivering his unique perspective with wit and sharp humor. As a verified artist, Dave's comedy is raw, honest, and unapologetically funny."
+// }
 
 const displayVideos = (videos) => {
     const videoContainer = document.getElementById('videos')
@@ -42,9 +42,10 @@ const displayVideos = (videos) => {
     <img
       src="${item.thumbnail}" class="h-full w-full object-cover"
       alt="Shoes" />
-      <span class="absolute right-2 bottom-2 bg-black text-white rounded p-1">${item.others.posted_date}</span>
+      ${item.others.posted_date?.length == 0 ? "" : ` <span class="absolute right-2 bottom-2 bg-black text-white rounded p-1">${item.others.posted_date}</span>`}
+     
   </figure>
-  <div class="px-0 py-2 flex gap-2">
+  <div class="px-0 py-2 flex gap-2s">
    <div>
    <img class="w-10 h-10 rounded-full object-cover" src="${item.authors[0].profile_picture}">
    </div>
@@ -61,8 +62,8 @@ const displayVideos = (videos) => {
   </div>
        `
         videoContainer.append(card)
+        console.log(item);
     })
-
 }
 
 
