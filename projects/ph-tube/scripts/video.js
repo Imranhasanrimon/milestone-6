@@ -24,27 +24,30 @@ const loadVideos = () => {
         .then(data => displayVideos(data.videos))
         .catch(err => console.log(err))
 }
-// const demo = {
-//     "category_id": "1003",
-//     "video_id": "aaaf",
-//     "thumbnail": "https://i.ibb.co/5LRQkKF/stick-and-stones.jpg",
-//     "title": "Sticks & Stones",
-//     "authors": [
-//         {
-//             "profile_picture": "https://i.ibb.co/rdTZrCM/dev.jpg",
-//             "profile_name": "Dave Chappelle",
-//             "verified": true
-//         }
-//     ],
-//     "others": {
-//         "views": "113K",
-//         "posted_date": ""
-//     },
-//     "description": "Dave Chappelle's 'Sticks & Stones' has garnered 113K views and remains a controversial yet highly engaging piece of stand-up comedy. Known for his fearless approach, Dave dives into a wide range of topics, delivering his unique perspective with wit and sharp humor. As a verified artist, Dave's comedy is raw, honest, and unapologetically funny."
-// }
+//load category videos
+const loadCategoryVideos = (id) => {
+    //fetch the data
+    fetch(` https://openapi.programming-hero.com/api/phero-tube/category/${id}`)
+        .then(res => res.json())
+        .then(data => displayVideos(data.category))
+        .catch(err => console.log(err))
+}
 
 const displayVideos = (videos) => {
-    const videoContainer = document.getElementById('videos')
+    const videoContainer = document.getElementById('videos');
+    videoContainer.innerHTML = '';
+    if (videos.length == 0) {
+        videoContainer.classList.remove('grid')
+        videoContainer.innerHTML = `
+        <div class="flex justify-center border h-[500px] items-center flex-col ">
+          <img src="./assets/Icon.png">
+          <h2 class="mt-5 font-bold text-xl">No Content Available Here</h2>
+        </div>
+        `
+        return
+    } else {
+        videoContainer.classList.add('grid')
+    }
     videos.forEach(item => {
         const card = document.createElement('div');
         card.classList = 'card card-compact  shadow-sm border'
@@ -79,12 +82,14 @@ const displayVideos = (videos) => {
 
 
 const displayCategories = (categories) => {
+    const categoryContainer = document.getElementById('categories')
     categories.forEach(item => {
         const button = document.createElement('button');
         button.classList = 'btn';
         button.innerText = item.category;
+        button.setAttribute('onclick', `loadCategoryVideos(${item.category_id})`)
 
-        document.getElementById('categories').append(button)
+        categoryContainer.append(button)
     })
 }
 
