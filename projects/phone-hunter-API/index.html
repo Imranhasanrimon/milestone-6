@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter API</title>
+    <!-- daisyUI and tailwind  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.11/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section class="text-center mt-5">
+        <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+        <button onclick="handleSearch()" class="btn">Search</button> <br>
+        <span id="spinner" class="hidden loading loading-spinner loading-lg mt-6"></span>
+    </section>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
