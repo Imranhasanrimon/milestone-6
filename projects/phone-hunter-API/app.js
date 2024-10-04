@@ -15,7 +15,6 @@ const displayAllPhones = (phones) => {
     phones.forEach(phone => {
 
         const { brand, image, slug } = phone;
-        console.log(brand, image, slug);
         const div = document.createElement('div');
         div.innerHTML = `
         <div class="card card-compact bg-base-100 w-96 shadow-xl">
@@ -28,7 +27,7 @@ const displayAllPhones = (phones) => {
     <h2 class="card-title">${brand}</h2>
     <p>${slug}</p>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary">Show Details</button>
+      <button onclick="phoneDetails('${slug}')" class="btn btn-primary">Show Details</button>
     </div>
   </div>
 </div>
@@ -53,6 +52,13 @@ const handleSearch = () => {
     setTimeout(() => {
         loadAllPhones(false, inputValue)
     }, 700)
+}
+
+
+const phoneDetails = async (slug) => {
+    const response = await fetch(`https://openapi.programming-hero.com/api/phone/${slug}`);
+    const data = await response.json();
+    console.log(data.data);
 }
 
 loadAllPhones(false, 'iphone')
