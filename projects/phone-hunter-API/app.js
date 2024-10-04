@@ -62,3 +62,5 @@ const phoneDetails = async (slug) => {
 }
 
 loadAllPhones(false, 'iphone')
+
+//this project is almost done
