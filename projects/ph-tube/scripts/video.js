@@ -6,9 +6,15 @@ function getTimeString(time) {
     const minute = parseInt(remainingSecond / 60);
     remainingSecond %= 60;
 
-    return `${hour} hours ${minute} minutes ${remainingSecond} ago`
+    return `${hour} hours ${minute} minutes ${remainingSecond} seconds ago`
 }
 
+const removeActiveCalass = () => {
+    const buttons = document.getElementsByClassName('category-btn')
+    for (let btn of buttons) {
+        btn.classList.remove('bg-red-500', 'text-white')
+    }
+}
 const loadCategories = () => {
     //fetch the data
     fetch('https://openapi.programming-hero.com/api/phero-tube/categories')
@@ -29,7 +35,12 @@ const loadCategoryVideos = (id) => {
     //fetch the data
     fetch(` https://openapi.programming-hero.com/api/phero-tube/category/${id}`)
         .then(res => res.json())
-        .then(data => displayVideos(data.category))
+        .then(data => {
+            removeActiveCalass()
+            const activeBtn = document.getElementById(id)
+            activeBtn.classList.add('bg-red-500', 'text-white')
+            displayVideos(data.category)
+        })
         .catch(err => console.log(err))
 }
 
@@ -39,7 +50,7 @@ const displayVideos = (videos) => {
     if (videos.length == 0) {
         videoContainer.classList.remove('grid')
         videoContainer.innerHTML = `
-        <div class="flex justify-center border h-[500px] items-center flex-col ">
+        <div class="flex justify-center  h-[500px] items-center flex-col ">
           <img src="./assets/Icon.png">
           <h2 class="mt-5 font-bold text-xl">No Content Available Here</h2>
         </div>
@@ -71,7 +82,7 @@ const displayVideos = (videos) => {
    ${item.authors[0].verified == true ? `<img class="w-5 h-5" src="https://img.icons8.com/?size=48&id=p9jKUHLk5ejE&format=png">` : ""}
 
    </div>
-   <p></p>
+   <p><button class="btn btn-sm btn-error">Details</button></p>
    </div>
   </div>
        `
@@ -85,9 +96,11 @@ const displayCategories = (categories) => {
     const categoryContainer = document.getElementById('categories')
     categories.forEach(item => {
         const button = document.createElement('button');
-        button.classList = 'btn';
+        button.classList = 'btn category-btn';
+
         button.innerText = item.category;
         button.setAttribute('onclick', `loadCategoryVideos(${item.category_id})`)
+        button.setAttribute('id', `${item.category_id}`)
 
         categoryContainer.append(button)
     })
