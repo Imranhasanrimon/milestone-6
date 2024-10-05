@@ -1,11 +1,23 @@
 
 
 
-const loadAllPosts = async () => {
+const loadAllPosts = async (category) => {
 
-    const response = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts");
+    const response = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts${category ? `?category=${category}` : ""}`);
     const data = await response.json();
     displayAllPosts(data.posts);
+
+
+    // if (category) {
+    //     const response = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${category}`);
+    //     const data = await response.json();
+    //     displayAllPosts(data.posts);
+    // } else {
+    //     const response = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts");
+    //     const data = await response.json();
+    //     displayAllPosts(data.posts);
+    // }
+
 }
 
 const loadAllLatestPosts = async () => {
@@ -16,6 +28,9 @@ const loadAllLatestPosts = async () => {
 
 const displayAllPosts = (posts) => {
     const postContainer = document.getElementById('post-container');
+
+    postContainer.innerHTML = ''
+
     posts.forEach((post) => {
         const { author, category, comment_count, view_count, posted_time, description, image, title, isActive } = post
         //each post
@@ -111,27 +126,25 @@ const displayAllLatestPosts = (posts) => {
 loadAllPosts()
 loadAllLatestPosts()
 
+//search by query
+document.getElementById('btn-search').addEventListener('click', () => {
+    const searchValue = document.getElementById('input-field').value
+    loadAllPosts(searchValue);
 
+})
+//search by query (Keyup event)
+document.getElementById('input-field').addEventListener('keyup', () => {
+    const searchValue = document.getElementById('input-field').value
+    loadAllPosts(searchValue);
 
+})
 
+//search by query (Keyup "Enter" event)
+document.getElementById('input-field').addEventListener('keyup', (e) => {
+    const searchValue = document.getElementById('input-field').value
+    if (e.key === 'Enter') {
+        loadAllPosts(searchValue);
+    }
 
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// //latest post
-// fetch(" https://openapi.programming-hero.com/api/retro-forum/latest-posts")
-//     .then(res => res.json())
-//     .then(data => console.log(data))
