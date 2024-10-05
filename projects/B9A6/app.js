@@ -8,6 +8,11 @@ const loadAllPosts = async () => {
     displayAllPosts(data.posts);
 }
 
+const loadAllLatestPosts = async () => {
+    const response = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
+    const data = await response.json()
+    console.log(data);
+}
 const displayAllPosts = (posts) => {
     const postContainer = document.getElementById('post-container');
     posts.forEach((post) => {
@@ -69,6 +74,7 @@ const mark = (post) => {
 
 
 loadAllPosts()
+loadAllLatestPosts()
 
 
 
