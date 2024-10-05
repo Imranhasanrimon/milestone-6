@@ -38,7 +38,7 @@ const displayAllPosts = (posts) => {
                 <i class="fa-regular fa-clock"></i> ${posted_time} min
             </div>
             <!-- Mark button  -->
-            <div class="absolute right-3 bottom-0 text-white bg-green-400 w-8 h-8 flex justify-center items-center rounded-full cursor-pointer hover:rotate-6">
+            <div onclick="mark()" class="absolute right-3 bottom-0 text-white bg-green-400 w-8 h-8 flex justify-center items-center rounded-full cursor-pointer hover:rotate-6">
             <i class="fa-solid fa-message "></i>
             </div>
         </div>
@@ -47,6 +47,20 @@ const displayAllPosts = (posts) => {
     })
 
 }
+let counter = 1;
+const mark = (post) => {
+    document.getElementById('counter').innerText = counter++;
+    const markContainer = document.getElementById('mark-container');
+    const div = document.createElement('div');
+    div.classList = "bg-white p-2 rounded-lg flex justify-between items-center gap-5 mt-2"
+    div.innerHTML = `
+    <p>It is one thing to subject yourself to a costume mishap</p>
+                        <div class="font-bold">1552</div>
+    `;
+    markContainer.append(div)
+    console.log(post);
+}
+
 
 loadAllPosts()
 
