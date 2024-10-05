@@ -11,8 +11,9 @@ const loadAllPosts = async () => {
 const loadAllLatestPosts = async () => {
     const response = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
     const data = await response.json()
-    console.log(data);
+    displayAllLatestPosts(data);
 }
+
 const displayAllPosts = (posts) => {
     const postContainer = document.getElementById('post-container');
     posts.forEach((post) => {
@@ -72,6 +73,40 @@ const mark = (post) => {
 
 }
 
+const displayAllLatestPosts = (posts) => {
+    const postContainer = document.getElementById('latest-container')
+    posts.forEach((post) => {
+        const { cover_image, profile_image, title, description, author } = post;
+        const div = document.createElement('div');
+        div.classList = "shadow-lg p-2 rounded-xl";
+        div.innerHTML = `
+        <!-- image -->
+                    <div>
+                        <img class="rounded-md" src="${cover_image}" alt="">
+                    </div>
+                    <!-- info -->
+                    <div class="space-y-2 p-3 mb-6">
+                        <i class="fa-solid fa-calendar-days mr-2 "></i> ${author.posted_date ? author.posted_date : 'No Publish Date'}
+                        <h2 class="text-lg font-bold">${title}</h2>
+                        <p class="text-sm">${description}</p>
+                        <!-- user -->
+                        <div class="flex items-center gap-5">
+                            <div class="avatar">
+                                <div class="ring-primary ring-offset-base-100 w-10 rounded-full ring ring-offset-2">
+                                    <img src="${profile_image}" />
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class=" font-bold">${author.name}</h2>
+                                <h2 class=" font-medium text-gray-500">${author.designation ? author.designation : 'Unknown'}</h2>
+                            </div>
+                        </div>
+                    </div>
+
+        `;
+        postContainer.append(div)
+    })
+}
 
 loadAllPosts()
 loadAllLatestPosts()
