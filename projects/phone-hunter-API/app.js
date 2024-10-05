@@ -45,7 +45,6 @@ const handleShowAll = () => {
 
 const handleSearch = () => {
     const inputValue = document.getElementById('input-value').value
-    console.log(inputValue);
     document.getElementById('spinner').classList.remove('hidden')
     setTimeout(() => {
         loadAllPhones(false, inputValue)
@@ -56,7 +55,7 @@ const handleSearch = () => {
 const phoneDetails = async (slug) => {
     const response = await fetch(`https://openapi.programming-hero.com/api/phone/${slug}`);
     const data = await response.json();
-    console.log(data.data);
+    // console.log(data.data);
 }
 
 loadAllPhones(false, 'iphone')
