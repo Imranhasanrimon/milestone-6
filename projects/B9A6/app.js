@@ -38,27 +38,33 @@ const displayAllPosts = (posts) => {
                 <i class="fa-regular fa-clock"></i> ${posted_time} min
             </div>
             <!-- Mark button  -->
-            <div onclick="mark()" class="absolute right-3 bottom-0 text-white bg-green-400 w-8 h-8 flex justify-center items-center rounded-full cursor-pointer hover:rotate-6">
+            <div  class="mark absolute right-3 bottom-0 text-white bg-green-400 w-8 h-8 flex justify-center items-center rounded-full cursor-pointer hover:rotate-6">
             <i class="fa-solid fa-message "></i>
             </div>
         </div>
-        `
+        `;
+
+        div.querySelector(".mark").addEventListener('click', () => {
+            mark(post)
+        })
         postContainer.append(div)
     })
 
 }
+
 let counter = 1;
 const mark = (post) => {
     document.getElementById('counter').innerText = counter++;
+
     const markContainer = document.getElementById('mark-container');
     const div = document.createElement('div');
     div.classList = "bg-white p-2 rounded-lg flex justify-between items-center gap-5 mt-2"
     div.innerHTML = `
-    <p>It is one thing to subject yourself to a costume mishap</p>
-                        <div class="font-bold">1552</div>
+    <p>${post.description}</p>
+     <div class="font-bold flex items-center gap-1"><i class="fa-regular fa-eye"></i> ${post.view_count}</div>
     `;
     markContainer.append(div)
-    console.log(post);
+
 }
 
 
