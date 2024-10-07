@@ -125,21 +125,21 @@
 
 
 //problem___________2
-problem___________1
-function getUserData() {
-    return new Promise((res, rej) => {
-        setTimeout(() => {
-            res("User data retrieved")
-        }, 2000)
-    })
-}
+// problem___________1
+// function getUserData() {
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             res("User data retrieved")
+//         }, 2000)
+//     })
+// }
 
-async function fetchUserData() {
-    const message = await getUserData();
-    console.log(message);
+// async function fetchUserData() {
+//     const message = await getUserData();
+//     console.log(message);
 
-}
-fetchUserData()
+// }
+// fetchUserData()
 
 
-problem___________2
+// problem___________2
