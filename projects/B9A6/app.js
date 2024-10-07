@@ -8,15 +8,7 @@ const loadAllPosts = async (category) => {
     displayAllPosts(data.posts);
 
 
-    // if (category) {
-    //     const response = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${category}`);
-    //     const data = await response.json();
-    //     displayAllPosts(data.posts);
-    // } else {
-    //     const response = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts");
-    //     const data = await response.json();
-    //     displayAllPosts(data.posts);
-    // }
+
 
 }
 
