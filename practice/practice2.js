@@ -266,3 +266,60 @@
 
 
 // problem___________2
+//     const promise = new Promise(function (res, rej) {
+
+//         setTimeout(function () {
+//             if (randomDelay < 3000) {
+//                 res("Login successful")
+//             } else {
+//                 rej("Login failed")
+//             }
+//         }, randomDelay)
+
+//     });
+
+//     return promise;
+// }
+
+// loginUser()
+//     .then(value => console.log(value))
+//     .catch(error => console.log(error))
+
+// ---------------------------------------------------------------
+/*                  ASYNC/AWAIT PROBLEMS                    */
+//problem___________1
+// function getUserData() {
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             res("User data retrieved")
+//         }, 2000)
+//     })
+// }
+
+// async function fetchUserData() {
+//     const message = await getUserData();
+//     console.log(message);
+
+// }
+// fetchUserData()
+
+
+// problem___________2
+// problem___________1
+// function getUserData() {
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             res("User data retrieved")
+//         }, 2000)
+//     })
+// }
+
+// async function fetchUserData() {
+//     const message = await getUserData();
+//     console.log(message);
+
+// }
+// fetchUserData()
+
+
+// problem___________2
