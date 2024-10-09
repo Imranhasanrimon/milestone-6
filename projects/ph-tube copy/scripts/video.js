@@ -14,14 +14,24 @@ const loadVideoByCategory = async (id) => {
     const response = await fetch(`https://openapi.programming-hero.com/api/phero-tube/category/${id}`);
     const data = await response.json();
     displayAllVideos(data.category);
+    activeBtn(id);
+}
+
+const activeBtn = (id) => {
+    const buttons = document.getElementsByClassName('category-btn');
+    for (let button of buttons) {
+        button.classList.remove('bg-red-500')
+    }
+    document.getElementById(id).classList.add('bg-red-500')
 }
 
 const displayCategories = (categories) => {
     const buttonContainer = document.getElementById('categories');
     categories.forEach((category) => {
         const button = document.createElement('button');
-        button.classList = "btn";
+        button.classList = "btn category-btn";
         button.setAttribute('onclick', `loadVideoByCategory(${category.category_id})`)
+        button.setAttribute('id', `${category.category_id}`)
         button.innerText = category.category;
         buttonContainer.append(button)
     })
