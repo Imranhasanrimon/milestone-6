@@ -38,7 +38,20 @@ const displayCategories = (categories) => {
 }
 const displayAllVideos = (videos) => {
     const cardContainer = document.getElementById('videos');
-    cardContainer.innerHTML = ''
+    cardContainer.innerHTML = '';
+    if (videos.length == 0) {
+        cardContainer.classList.remove('grid')
+        cardContainer.innerHTML = `
+        <div class="mt-10 flex justify-center item-center ">
+        <div>
+        <img src="./assets/Icon.png">
+        <h1>No Videos Available</h1>
+        </div>
+        </div>
+        `
+    } else {
+        cardContainer.classList.add('grid')
+    }
     videos.forEach((video) => {
         const card = document.createElement('div');
         card.classList = 'card card-compact border';
