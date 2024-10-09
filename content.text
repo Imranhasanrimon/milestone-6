@@ -4,11 +4,11 @@
 4.Event loop
 5.Promise ✅
 6.then ✅
-6.catch ✅
+6.try,catch ✅
 8.throw
 9.resolve, reject ✅
 10.Async, await ✅
-11.try ✅
+
 
 
 
