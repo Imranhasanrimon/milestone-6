@@ -23,6 +23,13 @@ const loadVideoById = async (id) => {
     showModal(data)
 }
 
+const loadVideoByQuery = async (title) => {
+    const response = await fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title=${title}`);
+    const data = await response.json();
+    console.log(data.videos)
+    displayAllVideos(data.videos)
+}
+
 const activeBtn = (id) => {
     const buttons = document.getElementsByClassName('category-btn');
     for (let button of buttons) {
@@ -101,7 +108,9 @@ const displayAllVideos = (videos) => {
 
 }
 
-
+document.getElementById('search-input').addEventListener('keyup', (e) => {
+    loadVideoByQuery(e.target.value);
+})
 
 
 
