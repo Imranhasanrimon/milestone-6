@@ -17,6 +17,12 @@ const loadVideoByCategory = async (id) => {
     activeBtn(id);
 }
 
+const loadVideoById = async (id) => {
+    const response = await fetch(`https://openapi.programming-hero.com/api/phero-tube/video/${id}`);
+    const data = await response.json();
+    showModal(data)
+}
+
 const activeBtn = (id) => {
     const buttons = document.getElementsByClassName('category-btn');
     for (let button of buttons) {
@@ -35,10 +41,20 @@ const displayCategories = (categories) => {
         button.innerText = category.category;
         buttonContainer.append(button)
     })
+};
+const showModal = (data) => {
+    const modalBody = document.getElementById('modal_body');
+    modalBody.innerHTML = `
+    <img src="${data.video.thumbnail}">
+    <h2 class="font-bold text-lg">${data.video.title}</h2>
+    <p>${data.video.description}</p>
+    `;
+    my_modal_5.showModal()
 }
 const displayAllVideos = (videos) => {
     const cardContainer = document.getElementById('videos');
     cardContainer.innerHTML = '';
+
     if (videos.length == 0) {
         cardContainer.classList.remove('grid')
         cardContainer.innerHTML = `
@@ -51,7 +67,8 @@ const displayAllVideos = (videos) => {
         `
     } else {
         cardContainer.classList.add('grid')
-    }
+    };
+
     videos.forEach((video) => {
         const card = document.createElement('div');
         card.classList = 'card card-compact border';
@@ -75,15 +92,14 @@ const displayAllVideos = (videos) => {
        </div>
     </div>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary btn-sm">Details</button>
+      <button onclick="loadVideoById('${video.video_id}')" class="btn btn-primary btn-sm">Details</button>
     </div>
   </div>
         `;
-        cardContainer.append(card)
+        cardContainer.append(card);
     })
 
 }
-
 
 
 
