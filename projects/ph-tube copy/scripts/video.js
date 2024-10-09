@@ -112,11 +112,21 @@ document.getElementById('search-input').addEventListener('keyup', (e) => {
     loadVideoByQuery(e.target.value);
 })
 
+const loadAllVideosForSorting = async () => {
+    const response = await fetch('https://openapi.programming-hero.com/api/phero-tube/videos');
+    const data = await response.json();
+    displayBySorting(data.videos);
+};
 
-
-
-
-
+const displayBySorting = (data) => {
+    data.sort((a, b) => {
+        const figureA = parseFloat(a.others.views.slice(0, -1));
+        const figureB = parseFloat(b.others.views.slice(0, -1));
+        return figureB - figureA;
+    });
+    displayAllVideos(data)
+}
 
 loadCategories()
 loadAllVideos();
+
