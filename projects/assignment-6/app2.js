@@ -30,12 +30,12 @@ const displayAllCategories = (categories) => {
         const div = document.createElement('div');
         div.setAttribute('onclick', `loadByCategory('${category.category}');spinner()`)
         div.setAttribute('id', `${category.category}`)
-        div.classList = `py-3 border rounded-full cursor-pointer category-btn`
+        div.classList = `py-2 border rounded-full cursor-pointer hover:bg-red-50 category-btn`
         div.innerHTML = `
                     <div class="flex items-center  justify-center gap-4">
-                        <img class="w-12" src="${category.category_icon}"
+                        <img class="w-8 md:w-12" src="${category.category_icon}"
                             alt="${category.category}">
-                        <span class="text-2xl font-semibold">${category.category}</span>
+                        <span class="text-xl md:text-2xl font-semibold">${category.category}</span>
                     </div>
         `;
         categoryContainer.append(div)
@@ -180,7 +180,7 @@ const displayLikedPets = (img) => {
     const likedContainer = document.getElementById('liked-pet')
     const likedImage = document.createElement('img');
     likedImage.setAttribute('src', img);
-    likedImage.classList = 'rounded-lg'
+    likedImage.classList = 'rounded-lg w-full'
     likedContainer.append(likedImage)
 }
 

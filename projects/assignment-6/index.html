@@ -64,10 +64,10 @@
             <div id="category-container" class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 mb-9">
             </div>
             <!-- sort button -->
-            <div class="flex justify-between">
-                <h4 class="text-2xl font-semibold">Best Deal For you</h4>
+            <div class="flex justify-between items-center">
+                <h4 class="text-lg sm:text-2xl font-semibold">Best Deal For you</h4>
                 <button onclick="loadAllPetsForSorting()"
-                    class="btn bg-sky-600 border-0 text-white hover:text-black">Sort by
+                    class="btn bg-sky-600 border-0 text-xs sm:text-lg text-white hover:text-black">Sort by
                     Price</button>
             </div>
 
@@ -76,12 +76,12 @@
             <div id="spinner" class="hidden flex justify-center py-40">
                 <span class=" loading loading-spinner loading-lg text-center"></span>
             </div>
-            <div id="details-container" class="grid grid-cols-1 md:grid-cols-4 gap-5  mt-8 mb-12">
+            <div id="details-container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5  mt-8 mb-12">
                 <!-- details  -->
                 <div id="pet-container" class="grid lg:grid-cols-3 sm:grid-cols-2 gap-5 col-span-3">
                 </div>
                 <!-- liked -->
-                <div id="liked-pet" class="grid grid-cols-1 md:grid-cols-2 grid-flow-row auto-rows-max
+                <div id="liked-pet" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 col-span-3 lg:col-span-1  grid-flow-row auto-rows-max
                 border rounded-xl p-5 gap-3">
 
                 </div>
