@@ -10,17 +10,25 @@ const loadAllVideos = async () => {
     displayAllVideos(data.videos);
 };
 
+const loadVideoByCategory = async (id) => {
+    const response = await fetch(`https://openapi.programming-hero.com/api/phero-tube/category/${id}`);
+    const data = await response.json();
+    displayAllVideos(data.category);
+}
+
 const displayCategories = (categories) => {
     const buttonContainer = document.getElementById('categories');
     categories.forEach((category) => {
         const button = document.createElement('button');
         button.classList = "btn";
+        button.setAttribute('onclick', `loadVideoByCategory(${category.category_id})`)
         button.innerText = category.category;
         buttonContainer.append(button)
     })
 }
 const displayAllVideos = (videos) => {
     const cardContainer = document.getElementById('videos');
+    cardContainer.innerHTML = ''
     videos.forEach((video) => {
         const card = document.createElement('div');
         card.classList = 'card card-compact border';
@@ -50,7 +58,6 @@ const displayAllVideos = (videos) => {
         `;
         cardContainer.append(card)
     })
-    console.log(videos[0].authors);
 
 }
 
