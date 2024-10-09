@@ -100,12 +100,17 @@ const displayAllVideos = (videos) => {
     </div>
     <div class="card-actions justify-end">
       <button onclick="loadVideoById('${video.video_id}')" class="btn btn-primary btn-sm">Details</button>
+      <button onclick="ops(this)" class="btn btn-primary btn-sm">Like</button>
     </div>
   </div>
         `;
         cardContainer.append(card);
     })
 
+}
+const ops = (btn) => {
+    btn.classList.add('bg-green-500');
+    btn.innerText = "Liked"
 }
 
 document.getElementById('search-input').addEventListener('keyup', (e) => {
