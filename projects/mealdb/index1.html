@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty HUT</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=UixQ-iP7S1Hw&format=png&color=000000"
+        type="image/x-icon">
+    <!-- daisyUI and tailwind CDN  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome CDN  -->
+    <script src="https://kit.fontawesome.com/82b4de73d1.js" crossorigin="anonymous"></script>
+    <!-- css -->
+    <style>
+        #hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/banner_1.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+
+</head>
+
+<body id="body">
+    <header class=" ">
+        <!-- Navbar -->
+        <div class="navbar w-11/12 max-w-screen-2xl mx-auto">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl">Tasty HUT</a>
+            </div>
+            <div class="flex-none">
+                <ul class="menu menu-horizontal px-1">
+                    <button class="btn bg-yellow-400">Sign Up</button>
+                </ul>
+            </div>
+        </div>
+
+        <!-- hero -->
+        <div id="hero" class="text-center ">
+            <!-- text -->
+            <div class="max-w-2xl w-11/12 mx-auto text-white py-36">
+                <h1 class="text-3xl md:text-5xl font-bold mb-6">Taste Our Delicious <br> Best Foods</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+                <!-- search bar  -->
+                <label class="input border-0  flex items-center gap-2 pr-0 mt-8">
+                    <input type="text" class="grow" placeholder="Search any food" />
+                    <button class="btn bg-yellow-400 border-0">Search</button>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-11/12 max-w-screen-2xl mx-auto my-24">
+        <section>
+            <h1 class="text-2xl font-bold text-center">Your Favourite Food</h1>
+            <div id="food-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-neutral py-10">
+        <div class="footer  text-neutral-content w-11/12  max-w-screen-2xl mx-auto">
+            <nav class="max-w-80 mb-3">
+                <!-- logo -->
+                <div class="flex items-center gap-3">
+                    <img class="h-16" src="https://img.icons8.com/?size=100&id=vIX37uT4v72u&format=png&color=000000"
+                        alt="">
+                    <h2 class="text-3xl font-bold text-white">Tasty HUT</h2>
+                </div>
+                <a class="link link-hover">Location: av. Washington 165, NY CA 54003</a>
+                <a class="link link-hover">Phone: +31 85 964 47 25</a>
+                <a class="link link-hover">Email: info@yourdomain.com</a>
+                <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM</a>
+                <div class="flex items-center gap-3">
+                    <img class="w-9 cursor-pointer"
+                        src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="">
+                    <img class="w-9 cursor-pointer"
+                        src="https://img.icons8.com/?size=100&id=bVGqATNwfhYq&format=png&color=000000" alt="">
+                    <img class="w-9 cursor-pointer"
+                        src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt="">
+                    <img class="w-9 cursor-pointer"
+                        src="https://img.icons8.com/?size=100&id=nj0Uj45LGUYh&format=png&color=000000" alt="">
+                </div>
+            </nav>
+            <nav class="md:justify-self-center mb-3">
+                <h6 class="font-bold text-xl text-white">Useful Links</h6>
+                <a class="link link-hover">Home</a>
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Animals</a>
+                <a class="link link-hover">Foundation</a>
+                <a class="link link-hover">Contact</a>
+            </nav>
+            <nav class="md:justify-self-end w-full md:w-auto">
+                <h6 class="font-bold text-xl text-white mb-3">Drop a Message</h6>
+                <input type="text" placeholder="Enter your email" class="input input-bordered w-full bg-gray-700" />
+                <button class="btn w-full border-0 bg-sky-600 text-white hover:text-black">Subscribe</button>
+
+            </nav>
+        </div>
+
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
