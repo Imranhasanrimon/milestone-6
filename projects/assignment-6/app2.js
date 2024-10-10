@@ -219,6 +219,7 @@ const loadAllPetsForSorting = async () => {
     const response = await fetch('https://openapi.programming-hero.com/api/peddy/pets');
     const data = await response.json();
     displayBySorting(data.pets);
+    spinner()
 };
 
 const displayBySorting = (data) => {
