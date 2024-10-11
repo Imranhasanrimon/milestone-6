@@ -98,9 +98,21 @@
 // functional Scope: everything inside of function
 // Block Scope: inside for loop, switch case, if statement etc. which are witthin curly braces;
 
-if (true) {
-    let x = 10;
-    var y = 5;
+// if (true) {
+//     let x = 10;
+//     var y = 5;
+// }
+// console.log(y);
+// console.log(x);
+
+//---------------Lexical Scope----------------
+function jerry() {
+    console.log(name);
 }
-console.log(y);
-console.log(x);
+function tom() {
+    var name = 'tom'
+    jerry()
+}
+var name = 'Cartoon';
+
+tom()
