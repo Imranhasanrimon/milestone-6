@@ -48,21 +48,42 @@
 //     console.log(this.name);
 // }
 
-console.log('Inside GEC');
-var a = 5;
-function testMe() {
-    console.log("Inside testMe EC");
-    var b = 10;
-    var user = {
-        name: "imran",
-        country: "BD"
-    };
-    function testAgain() {
-        console.log('Inside testAgain EC');
-        console.log('Exiting testAgain EC');
-    };
-    testAgain();
-    console.log('Exiting testMe EC');
+// console.log('Inside GEC');
+// var a = 5;
+// function testMe() {
+//     console.log("Inside testMe EC");
+//     var b = 10;
+//     var user = {
+//         name: "imran",
+//         country: "BD"
+//     };
+//     function testAgain() {
+//         console.log('Inside testAgain EC');
+//         console.log('Exiting testAgain EC');
+//     };
+//     testAgain();
+//     console.log('Exiting testMe EC');
+// }
+// testMe();
+// console.log("Exiting GEC");
+
+const message = "I can do it";
+
+function sum(a, b) {
+    const result = a + b;
+    return result;
 }
-testMe();
-console.log("Exiting GEC");
+
+function mul(a, b) {
+    const result = a * b;
+    return result;
+}
+
+function calc(a, b) {
+    return sum(a, b) + mul(a, b);
+}
+
+function getResul(a, b) {
+    return calc(a, b);
+}
+console.log(getResul(5, 7));;
