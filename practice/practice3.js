@@ -30,3 +30,11 @@
 //         }, 1000);
 //     }, 2000);
 // }
+
+fetch('https://official-joke-api.appspot.com/random_joke')
+    .then(res => res.json())
+    .then(data => dispalyJoke(data))
+
+const dispalyJoke = (data) => {
+    console.log(data.setup, data.punchline);
+}
