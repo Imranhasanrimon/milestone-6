@@ -25,13 +25,17 @@
 // console.log(x);
 // console.log(a);
 
-//object destructuring
-const obj = {
-    name: 'Imran',
-    age: 23
-}
+//object spread operator
+// const obj = {
+//     name: 'Imran',
+//     age: 23
+// }
 
-const obj2 = { ...obj };
-obj2.isMarried = false
-console.log(obj);
-console.log(obj2);
+// const obj2 = { ...obj };
+// obj2.isMarried = false
+// console.log(obj);
+// console.log(obj2);
+
+const numbers = [1, 2, 3, 5];
+const mapped = numbers.map((num) => console.log(num))
+console.log(mapped);
