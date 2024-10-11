@@ -43,7 +43,26 @@
 // console.log(window);
 // console.log(window === this);
 
-const name = 'Tom';
-function sayname() {
-    console.log(this.name);
+// const name = 'Tom';
+// function sayname() {
+//     console.log(this.name);
+// }
+
+console.log('Inside GEC');
+var a = 5;
+function testMe() {
+    console.log("Inside testMe EC");
+    var b = 10;
+    var user = {
+        name: "imran",
+        country: "BD"
+    };
+    function testAgain() {
+        console.log('Inside testAgain EC');
+        console.log('Exiting testAgain EC');
+    };
+    testAgain();
+    console.log('Exiting testMe EC');
 }
+testMe();
+console.log("Exiting GEC");
