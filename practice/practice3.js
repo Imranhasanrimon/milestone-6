@@ -106,13 +106,67 @@
 // console.log(x);
 
 //---------------Lexical Scope----------------
-function jerry() {
-    console.log(name);
-}
-function tom() {
-    var name = 'tom'
-    jerry()
-}
-var name = 'Cartoon';
+// function jerry() {
+//     console.log(name);
+// }
+// function tom() {
+//     var name = 'tom'
+//     jerry()
+// }
+// var name = 'Cartoon';
 
-tom()
+// tom()
+
+// function firstFunction() {
+//     console.log("First Function");
+// }
+
+// function secondFunction() {
+//     firstFunction()
+//     // Call firstFunction here
+//     console.log("Second Function");
+// }
+
+// secondFunction()
+// // Call secondFunction here
+
+// function start() {
+//     middle()
+//     // Call middle function here
+//     console.log("Start");
+// }
+
+// function middle() {
+//     end()
+//     // Call end function here
+//     console.log("Middle");
+// }
+
+// function end() {
+//     console.log("End");
+// }
+// start()
+// // Call start function here
+
+// function outer() {
+//     let x = "Outer";
+//     // Call inner function here
+//     inner()
+// }
+
+// function inner() {
+//     let x = "Inner";
+//     // Call display function here
+//     display()
+// }
+
+// function display() {
+//     // Print x here
+//     console.log(x);
+// }
+
+// // Call outer function here
+// outer()
+
+console.log(x);  // What will this log?
+var x = 5;
