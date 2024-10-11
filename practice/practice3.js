@@ -67,23 +67,28 @@
 // testMe();
 // console.log("Exiting GEC");
 
-const message = "I can do it";
+// const message = "I can do it";
 
-function sum(a, b) {
-    const result = a + b;
-    return result;
-}
+// function sum(a, b) {
+//     const result = a + b;
+//     return result;
+// }
 
-function mul(a, b) {
-    const result = a * b;
-    return result;
-}
+// function mul(a, b) {
+//     const result = a * b;
+//     return result;
+// }
 
-function calc(a, b) {
-    return sum(a, b) + mul(a, b);
-}
+// function calc(a, b) {
+//     return sum(a, b) + mul(a, b);
+// }
 
-function getResul(a, b) {
-    return calc(a, b);
-}
-console.log(getResul(5, 7));;
+// function getResul(a, b) {
+//     return calc(a, b);
+// }
+// console.log(getResul(5, 7));;
+
+console.log('name is', name);
+var name;
+name = 'tom';
+console.log('name is', name);
