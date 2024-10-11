@@ -88,7 +88,19 @@
 // }
 // console.log(getResul(5, 7));;
 
-console.log('name is', name);
-var name;
-name = 'tom';
-console.log('name is', name);
+// console.log('name is', name);
+// var name;
+// name = 'tom';
+// console.log('name is', name);
+
+//---------------Scope----------------
+// Global Scope: everything outside of function
+// functional Scope: everything inside of function
+// Block Scope: inside for loop, switch case, if statement etc. which are witthin curly braces;
+
+if (true) {
+    let x = 10;
+    var y = 5;
+}
+console.log(y);
+console.log(x);
