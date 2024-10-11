@@ -31,10 +31,19 @@
 //     }, 2000);
 // }
 
-fetch('https://official-joke-api.appspot.com/random_joke')
-    .then(res => res.json())
-    .then(data => dispalyJoke(data))
+// fetch('https://official-joke-api.appspot.com/random_joke')
+//     .then(res => res.json())
+//     .then(data => dispalyJoke(data))
 
-const dispalyJoke = (data) => {
-    console.log(data.setup, data.punchline);
+// const dispalyJoke = (data) => {
+//     console.log(data.setup, data.punchline);
+// }
+
+// console.log(this);
+// console.log(window);
+// console.log(window === this);
+
+const name = 'Tom';
+function sayname() {
+    console.log(this.name);
 }
