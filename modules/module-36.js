@@ -10,4 +10,19 @@
 // localStorage.setItem('person', JSON.stringify(obj))
 
 // console.log(JSON.parse(localStorage.getItem('person')));
-localStorage.removeItem('name')
+// localStorage.removeItem('name')
+
+const getInputValue = () => {
+    const productName = document.getElementById('product-name').value;
+    const productQuantity = document.getElementById('product-quantity').value;
+    saveInLocalStorage(productName, productQuantity);
+
+
+    document.getElementById('product-name').value = ''
+    document.getElementById('product-quantity').value = ''
+}
+
+const saveInLocalStorage = (name, quantity) => {
+    localStorage.setItem(name, quantity)
+
+}
