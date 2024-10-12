@@ -21,10 +21,29 @@
 const getInputValue = () => {
     const productName = document.getElementById('product-name').value;
     const productQuantity = document.getElementById('product-quantity').value;
-    saveInLocalStorage(productName, productQuantity);
+
+
+    setCart(productName, productQuantity);
 
 
     document.getElementById('product-name').value = ''
     document.getElementById('product-quantity').value = ''
 }
 
+const getStoredValue = () => {
+    let cart = {};
+    const storedCart = localStorage.getItem('cart');
+    if (storedCart) {
+        cart = JSON.parse(storedCart);
+    }
+    return cart;
+}
+
+
+const setCart = (productName, productQuantity) => {
+    const storedCart = getStoredValue();
+    storedCart[productName] = productQuantity;
+    localStorage.setItem('cart', JSON.stringify(storedCart))
+
+    // console.log(storedCart);
+}
