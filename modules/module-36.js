@@ -22,7 +22,15 @@ const getInputValue = () => {
     document.getElementById('product-quantity').value = ''
 }
 
+const obj = {};
+
 const saveInLocalStorage = (name, quantity) => {
-    localStorage.setItem(name, quantity)
+    obj[`${name}`] = quantity;
+    console.log(obj);
+
+
+
+    localStorage.setItem('newObj', JSON.stringify(obj))
 
 }
+    ;
