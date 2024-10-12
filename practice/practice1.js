@@ -247,4 +247,24 @@ course()
 //     .catch(function (error) {
 //         console.log(error);
 //     })
+// // enroll()
+// //     .then(progress)
+// //     .then(getCertificate)
+// //     .then(function (value) {
+// //         console.log(value);
+// //     })
+// //     .catch(function (error) {
+// //         console.log(error);
+// //     })
+// */
+
+// // enroll()
+// //     .then(progress)
+// //     .then(getCertificate)
+// //     .then(function (value) {
+// //         console.log(value);
+// //     })
+// //     .catch(function (error) {
+// //         console.log(error);
+// //     })
 
