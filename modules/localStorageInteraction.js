@@ -7,13 +7,39 @@ const addProduct = () => {
     quantityField.value = '';
 
 
-    displayProduct(product, quantity);
+
+    saveProductToLocalStorage(product, quantity);
 }
 
 const displayProduct = (product, quantity) => {
-
+    const ul = document.getElementById('product-container');
     const li = document.createElement('li');
     li.innerText = product + ' : ' + quantity;
-    const ul = document.getElementById('product-container');
     ul.append(li)
 }
+
+const getStoredShoppingCart = () => {
+    let cart = {};
+    const storedCart = localStorage.getItem('cart');
+    if (storedCart) {
+        cart = JSON.parse(storedCart)
+    }
+    return cart;
+}
+
+const saveProductToLocalStorage = (product, quantity) => {
+    const cart = getStoredShoppingCart();
+    cart[product] = quantity;
+    console.log(cart);
+    localStorage.setItem('cart', JSON.stringify(cart))
+}
+
+const showSavedData = () => {
+    const cart = getStoredShoppingCart();
+    for (let product in cart) {
+        const quantity = cart[product]
+        displayProduct(product, quantity);
+    }
+}
+
+showSavedData()
