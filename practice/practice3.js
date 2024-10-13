@@ -199,25 +199,25 @@
 
 // console.log(x);  // What will this log?
 // var x = 5;
-function outer() {
-    let x = "Outer";
-    // Call inner function here
-    inner()
-}
+// function outer() {
+//     let x = "Outer";
+//     // Call inner function here
+//     inner()
+// }
 
-function inner() {
-    let x = "Inner";
-    // Call display function here
-    display()
-}
+// function inner() {
+//     let x = "Inner";
+//     // Call display function here
+//     display()
+// }
 
-function display() {
-    // Print x here
-    console.log(x);
-}
+// function display() {
+//     // Print x here
+//     console.log(x);
+// }
 
-// Call outer function here
-outer()
+// // Call outer function here
+// outer()
 
-console.log(x);  // What will this log?
-var x = 5;
+// console.log(x);  // What will this log?
+// var x = 5;
