@@ -126,6 +126,17 @@
 // var name = 'Cartoon';
 
 // tom()
+//---------------Lexical Scope----------------
+// function jerry() {
+//     console.log(name);
+// }
+// function tom() {
+//     var name = 'tom'
+//     jerry()
+// }
+// var name = 'Cartoon';
+
+// tom()
 
 // function firstFunction() {
 //     console.log("First Function");
