@@ -1,13 +1,13 @@
 
-// fetch('https://openapi.programming-hero.com/api/peddy/pets')
-//     .then(res => res.json())
-//     .then(data => console.log(data))
+fetch('https://openapi.programming-hero.com/api/peddy/pets')
+    .then(res => res.json())
+    .then(data => console.log(data))
 
-// setTimeout(() => {
-//     // document.getElementById('my_modal_5').close()
-//     // my_modal_5.close()
-//     console.log('time over');
-// }, 1500)
+setTimeout(() => {
+    // document.getElementById('my_modal_5').close()
+    // my_modal_5.close()
+    console.log('time over');
+}, 1500)
 
 // let counter = 3;
 // const helloText = document.getElementById('hello');
