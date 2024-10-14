@@ -39,3 +39,10 @@
 // const numbers = [1, 2, 3, 5];
 // const mapped = numbers.map((num) => console.log(num))
 // console.log(mapped);
+
+const fetchData = () => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then(data => console.log(data))
+}
+console.log(fetchData());
