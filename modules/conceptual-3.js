@@ -48,12 +48,22 @@
 // }
 // fetchData()
 
-const fetchData = async () => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    const data = await res.json();
-    console.log(data);
+// const fetchData = async () => {
+//     const res = await fetch('https://jsonplaceholder.typicode.com/users');
+//     const data = await res.json();
+//     console.log(data);
 
-}
+// }
 
-fetchData()
+// fetchData()
 
+const promise1 = new Promise((resolve, reject) => {
+    console.log('promise is made');
+    resolve('forlm inside')
+
+})
+
+promise1
+    .then(res => {
+        console.log(res)
+    })
