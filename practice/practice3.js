@@ -242,3 +242,20 @@
 
 // console.log(x);  // What will this log?
 // var x = 5;
+
+// Closures 
+
+function human(name) {
+    function sayHi() {
+        console.log(`Hi I am ${name}`);
+    }
+
+    function sayHouYouFeel() {
+        console.log(`${name} is feeling good`);
+    }
+    sayHi()
+    sayHouYouFeel()
+}
+
+const imran = human('Imran');
+const najmul = human('Najmul')

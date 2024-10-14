@@ -57,13 +57,83 @@
 
 // fetchData()
 
-const promise1 = new Promise((resolve, reject) => {
-    console.log('promise is made');
-    resolve('forlm inside')
+// const promise1 = new Promise((resolve, reject) => {
+//     console.log('promise is made');
+//     setTimeout(() => {
+//         const status = false;
+//         if (status) {
+//             resolve('resolved')
+//         } else {
+//             reject('rejected')
+//         }
+//     }, 2000)
 
-})
+// })
 
-promise1
-    .then(res => {
-        console.log(res)
+// // promise1
+//     .then(res => {
+//         console.log(res);
+//         console.log('response then block')
+//     })
+//     .catch(err => console.log('this is catch block'))
+//     .finally(() => {
+//         console.log('this is finally block');
+//     })
+
+// const getPromise = async () => {
+//     try {
+//         const response = await promise1;
+//         console.log(response);
+//     } catch (err) {
+//         console.log(err);
+//     } finally {
+//         console.log('this is finally block');
+//     }
+// }
+// getPromise()
+
+// const promise1 = new Promise((resolve, reject) => {
+//     console.log('promise is made');
+//     setTimeout(() => {
+//         resolve('resolved promise 1')
+//     }, 1000)
+
+// })
+// const promise2 = new Promise((resolve, reject) => {
+//     console.log('promise is made');
+//     setTimeout(() => {
+//         resolve('resolved promise 2')
+//     }, 2000)
+
+// })
+
+// promise1
+//     .then(res => {
+//         console.log(res);
+//         promise2
+//             .then(res => {
+//                 console.log(res)
+//                 promise3
+//                     .then(res => {
+//                         console.log(res);
+//                     })
+//             })
+//     })
+
+// Promise.all([promise1, promise2, promise3])
+//     .then(values => {
+//         console.log(values[0]);
+//     })
+
+const fetching = (name) => {
+    return new Promise((resolve, reject) => {
+        console.log(name, 'promise is made');
+        setTimeout(() => {
+            resolve('resolved promise 3')
+        }, 3000)
+
     })
+}
+
+fetching('imrna')
+    .then(res => console.log(res))
