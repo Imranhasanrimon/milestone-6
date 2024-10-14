@@ -40,9 +40,20 @@
 // const mapped = numbers.map((num) => console.log(num))
 // console.log(mapped);
 
-const fetchData = () => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-        .then(res => res.json())
-        .then(data => console.log(data))
+//______________________________________________________________________________
+// const fetchData = () => {
+//     fetch('https://jsonplaceholder.typicode.com/users')
+//         .then(res => res.json())
+//         .then(data => console.log(data))
+// }
+// fetchData()
+
+const fetchData = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await res.json();
+    console.log(data);
+
 }
-console.log(fetchData());
+
+fetchData()
+
