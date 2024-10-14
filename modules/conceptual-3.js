@@ -36,6 +36,6 @@
 // console.log(obj);
 // console.log(obj2);
 
-const numbers = [1, 2, 3, 5];
-const mapped = numbers.map((num) => console.log(num))
-console.log(mapped);
+// const numbers = [1, 2, 3, 5];
+// const mapped = numbers.map((num) => console.log(num))
+// console.log(mapped);
