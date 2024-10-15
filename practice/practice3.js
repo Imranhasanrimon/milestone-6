@@ -270,3 +270,13 @@
 
 // var myFunc = sum();
 // console.dir(myFunc);
+
+function outer() {
+    console.log('outer');
+    return function inner() {
+        console.log('inner');
+    }
+}
+
+const x = outer();
+x()
