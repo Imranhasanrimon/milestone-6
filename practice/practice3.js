@@ -285,11 +285,17 @@
 //     console.log(x);
 // })()
 
-let count = 0;
-(function logCount() {
-    if (count === 0) {
-        let count = 1;
-        console.log(count);
-    }
-    console.log(count);
-})()
+// let count = 0;
+// (function logCount() {
+//     if (count === 0) {
+//         let count = 1;
+//         console.log(count);
+//     }
+//     console.log(count);
+// })()
+
+for (var i = 0; i < 5; i++) {
+    setTimeout(function () {
+        console.log(i);
+    }, 1000)
+}
