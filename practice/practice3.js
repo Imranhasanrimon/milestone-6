@@ -245,17 +245,28 @@
 
 // Closures 
 
-function human(name) {
-    function sayHi() {
-        console.log(`Hi I am ${name}`);
-    }
+// function human(name) {
+//     function sayHi() {
+//         console.log(`Hi I am ${name}`);
+//     }
 
-    function sayHouYouFeel() {
-        console.log(`${name} is feeling good`);
+//     function sayHouYouFeel() {
+//         console.log(`${name} is feeling good`);
+//     }
+//     sayHi()
+//     sayHouYouFeel()
+// }
+
+// const imran = human('Imran');
+// const najmul = human('Najmul')
+
+var num1 = 2;
+var sum = () => {
+    var num2 = 3;
+    return function () {
+        return num1 + num2
     }
-    sayHi()
-    sayHouYouFeel()
 }
 
-const imran = human('Imran');
-const najmul = human('Najmul')
+var myFunc = sum();
+console.dir(myFunc);
