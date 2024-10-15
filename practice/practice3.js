@@ -243,7 +243,7 @@
 // console.log(x);  // What will this log?
 // var x = 5;
 
-// Closures 
+// Closures
 
 // function human(name) {
 //     function sayHi() {
@@ -260,13 +260,13 @@
 // const imran = human('Imran');
 // const najmul = human('Najmul')
 
-var num1 = 2;
-var sum = () => {
-    var num2 = 3;
-    return function () {
-        return num1 + num2
-    }
-}
+// var num1 = 2;
+// var sum = () => {
+//     var num2 = 3;
+//     return function () {
+//         return num1 + num2
+//     }
+// }
 
-var myFunc = sum();
-console.dir(myFunc);
+// var myFunc = sum();
+// console.dir(myFunc);
