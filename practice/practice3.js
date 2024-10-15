@@ -294,8 +294,19 @@
 //     console.log(count);
 // })()
 
-for (var i = 0; i < 5; i++) {
-    setTimeout(function () {
-        console.log(i);
-    }, 1000)
+// for (var i = 0; i < 5; i++) {
+//     setTimeout(function () {
+//         console.log(i);
+//     }, 1000)
+// }
+
+// ______________________Prototypes___________________
+let person = {};
+person.name = "Jasim";
+person.age = 30;
+person.eat = function () {
+    console.log(`person is eating`);
+}
+person.sleep = function () {
+    console.log(`person is sleeping`);
 }
