@@ -271,12 +271,25 @@
 // var myFunc = sum();
 // console.dir(myFunc);
 
-function outer() {
-    console.log('outer');
-    return function inner() {
-        console.log('inner');
-    }
-}
+// function outer() {
+//     console.log('outer');
+//     return function inner() {
+//         console.log('inner');
+//     }
+// }
 
-const x = outer();
-x()
+// const x = outer();
+// x()
+
+// (function outer(x) {
+//     console.log(x);
+// })()
+
+let count = 0;
+(function logCount() {
+    if (count === 0) {
+        let count = 1;
+        console.log(count);
+    }
+    console.log(count);
+})()
